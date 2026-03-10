@@ -1,12 +1,20 @@
 @use 'style_elements/normalize' as *;
+@use 'style_elements/fonts' as *;
 @use 'style_elements/swiper-bundle' as *;
 @use 'sections/textRigth' as *;
 @use 'elements/breadcrumbs' as *;
 @use 'elements/title_section' as *;
 @use 'elements/sliders' as *;
+@use 'elements/header' as *;
 @use 'elements/button' as *;
 @use 'pages/index' as *;
 @use 'style_elements/animation' as *;
+
+
+
+
+
+
 body {
     min-height: 100vh;
     position: relative;
