@@ -1,0 +1,46 @@
+.hover-white {
+    display: block;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    color: #FFFFFF;
+    padding: 13px 35px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 16px;
+
+    &.main-link {
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 648px) {
+    .hover-white {
+        padding: 16px 50px;
+        &.main-link {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (min-width: 960px) {
+    .hover-white {
+        transition: .25s all ease;
+
+        &:hover {
+            border-color: transparent;
+            background: #214DDE;
+
+        }
+    }
+
+}
+
+@media (min-width: 960px) {
+    .hover-white {
+        &.main-link {
+            margin-top: 40px;
+        }
+    }
+
+}

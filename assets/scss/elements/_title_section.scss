@@ -1,0 +1,25 @@
+.title-text {
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 600;
+    color: #214DDE;
+}
+
+@media (min-width: 648px) {
+    .title-text {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .title-text {
+        display: block;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1880px) {
+    .title-text {
+        font-size: 20px;
+    }
+}
