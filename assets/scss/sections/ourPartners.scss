@@ -1,0 +1,89 @@
+.our-partners {
+    padding: 30px 0;
+    .container {
+        .partners-title {
+            font-family: Poppins;
+            font-size: 40px;
+            font-weight: 600;
+            text-align: center;
+            display: block;
+            margin: 0;
+        }
+        .partners-slider {
+            padding: 40px 0 20px;
+            .swiper-wrapper {
+                .swiper-slide {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        max-width: 150px;
+                        width: 100%;
+                    }
+                }
+            }
+            .swiper-scrollbar {
+                top: auto;
+                bottom: 0;
+                background: #3a3c46;
+                height: 1px;
+                width: 100% !important;
+                left: 0;
+                .swiper-scrollbar-drag {
+                    background: #214dde;
+                    height: 4px;
+                    top: -3px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 648px) {
+    .our-partners {
+        padding: 40px 0;
+        .container {
+            .partners-title {
+                font-size: 55px;
+            }
+            .partners-slider {
+                padding: 80px 0 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .our-partners {
+        padding: 60px 0;
+        .container {
+            .partners-title {
+                font-size: 76px;
+            }
+            .partners-slider {
+                padding: 140px 0 30px;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        img {
+                            max-width: 230px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1880px) {
+    .our-partners {
+        padding: 70px 0;
+        .container {
+            .partners-title {
+                font-size: 96px;
+            }
+            .partners-slider {
+                padding: 150px 0 30px;
+            }
+        }
+    }
+}

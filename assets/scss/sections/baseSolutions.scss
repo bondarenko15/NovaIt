@@ -1,0 +1,152 @@
+.base-solutions {
+    padding: 30px 0;
+    .container {
+        h2 {
+            font-family: Poppins;
+            font-weight: 600;
+            font-size: 35px;
+            color: #c2c5d2;
+            text-align: center;
+            display: block;
+            margin-bottom: 60px;
+            i {
+                color: #17181a;
+                display: block;
+            }
+        }
+        .base-solution_block {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            .card {
+                padding: 15px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                gap: 10px;
+                height: 300px;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 2px 2px 5px 0 rgba(77, 108, 209, 0.3);
+                .card-title {
+                    font-size: 18px;
+                    font-family: Poppins;
+                    font-weight: 600px;
+                    color: #ffffff;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                }
+                .card-descr {
+                    color: #b8b8b8;
+                    font-size: 14px;
+                    font-family: Poppins;
+                    font-weight: 400;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .base-solutions {
+        padding: 30px 0;
+        .container {
+            h2 {
+                font-size: 45px;
+            }
+            .base-solution_block {
+                flex-wrap: wrap;
+                flex-direction: row;
+
+                .card {
+                    &.large {
+                        width: 100%;
+                    }
+
+                    &.medium {
+                        width: calc(50% - 8px);
+                    }
+                    &.semi-medium {
+                        width: calc(50% - 8px);
+                    }
+                }
+                .card {
+                    padding: 20px;
+                    gap: 15px;
+                    .card-title {
+                        font-size: 20px;
+                    }
+                    .card-descr {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .base-solutions {
+        padding: 60px 0;
+        .container {
+            h2 {
+                font-size: 65px;
+            }
+            .base-solution_block {
+                .card {
+                    cursor: pointer;
+                    &.semi-medium {
+                       width: auto;
+                    }
+                    &.large {
+                        width: calc(50% - 8px);
+                    }
+
+                    &.medium {
+                        width: calc(25% - 12px);
+                    }
+                    
+                }
+                .card {
+                    padding: 20px;
+                    gap: 15px;
+                    .card-title {
+                        font-size: 20px;
+                    }
+                    .card-descr {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1880px) {
+    .base-solutions {
+        padding: 70px 0;
+        .container {
+            h2 {
+                font-size: 82px;
+            }
+            .base-solution_block {
+                .card {
+                    .card-title {
+                        font-size: 20px;
+                    }
+                    .card-descr {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

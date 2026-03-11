@@ -29,3 +29,39 @@ window.addEventListener('scroll', () => {
 
     lastScroll = currentScroll;
 });
+
+
+
+
+//Header lang 
+const lang = document.querySelector('.header-lang');
+const current = document.querySelector('.current-lang');
+
+current.addEventListener('click', (e) => {
+    e.stopPropagation();
+    lang.classList.toggle('active');
+});
+
+document.addEventListener('click', (e) => {
+    if (!lang.contains(e.target)) {
+        lang.classList.remove('active');
+    }
+});
+
+
+//Slider Partners
+
+const partnerSlider = new Swiper('.partners-slider', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: true,
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+    },
+    breakpoints: {
+        648: { slidesPerView: 4, spaceBetween: 40 },
+        1366: { slidesPerView: 6, spaceBetween: 60 },
+    }
+});
