@@ -1,0 +1,294 @@
+.case-studio {
+    padding: 30px 0;
+    position: relative;
+    .background-img {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .desktop {
+            display: none;
+        }
+    }
+    .container {
+        .case-title {
+            display: block;
+            margin: 0;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 40px;
+            color: #fff;
+            font-weight: 600;
+        }
+        .tabs-block {
+            margin-top: 40px;
+            .tab-up {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 30px;
+                overflow-x: auto;
+                border-bottom: 1px solid #3a3c46;
+                .tab-item {
+                    flex-shrink: 0;
+                    padding: 0 0 15px;
+                    img {
+                        display: block;
+                        opacity: 0.5;
+                        width: 60px;
+                    }
+                    &.active {
+                        position: relative;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 4px;
+                            display: block;
+                            background: #214dde;
+                            border-radius: 2px;
+                        }
+                        img {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            .tab-content {
+                margin-top: 30px;
+                padding: 20px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 20px;
+                transition: 0.25s all ease;
+                box-shadow:
+                    0 2.27px 2.21px 0 rgba(23, 30, 108, 0.06),
+                    0 6.65px 5.32px 0 rgba(23, 30, 108, 0.33);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    background: #1e1d24;
+                    z-index: -1;
+                }
+                .block-content {
+                    display: none;
+                    &.active {
+                        display: flex;
+                    }
+                    .img {
+                        width: 100%;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                    .block-text {
+                        margin-top: 20px;
+
+                        .descr {
+                            font-family: Poppins;
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: #fff;
+                            line-height: 22px;
+                        }
+                        span,
+                        .descr-s {
+                            font-family: Poppins;
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: #fff;
+                            display: block;
+                            margin-top: 10px;
+                        }
+                        span {
+                            font-weight: 600;
+                        }
+                        .tab-more {
+                            border: 1px solid #fff;
+                            border-radius: 35px;
+                            padding: 15px 30px;
+                            display: block;
+                            text-align: center;
+                            width: 100%;
+                            max-width: 335px;
+                            margin: 20px auto 0;
+                            font-family: Inter;
+                            font-size: 16px;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 648px) {
+    .case-studio {
+        padding: 40px 0;
+        .container {
+            .case-title {
+                font-size: 55px;
+            }
+            .tabs-block {
+                margin-top: 70px;
+                .tab-up {
+                    gap: 50px;
+                    .tab-item {
+                        img {
+                            width: 100px;
+                        }
+                    }
+                }
+                .tab-content {
+                    margin-top: 55px;
+                    .block-content {
+                        .img {
+                            img {
+                                object-fit: cover;
+                                max-height: 250px;
+                            }
+                        }
+                        .block-text {
+                            margin-top: 10px;
+                            .descr {
+                                font-size: 16px;
+                            }
+                            span,
+                            .descr-s {
+                                font-size: 14px;
+                                margin-top: 12px;
+                            }
+                            .tab-more {
+                                padding: 15px 70px;
+                                width: max-content;
+                                max-width: none;
+                                margin: 40px auto 0;
+                                font-family: Inter;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .case-studio {
+        padding: 60px 0;
+        .container {
+            .case-title {
+                font-size: 76px;
+            }
+            .tabs-block {
+                margin-top: 100px;
+                .tab-up {
+                    gap: 60px;
+                    .tab-item {
+                        cursor: pointer;
+                        img {
+                            width: 150px;
+                        }
+                    }
+                }
+                .tab-content {
+                    .block-content {
+                        margin-top: 0;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 40px;
+                        .img {
+                            flex-shrink: 0;
+                            width: calc(35% - 20px);
+                            img {
+                                object-fit: cover;
+                                max-height: none;
+                            }
+                        }
+                        .block-text {
+                            margin-top: 0;
+                            flex-shrink: 0;
+                            width: calc(65% - 20px);
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            .descr {
+                                font-size: 18px;
+                                line-height: 28px;
+                            }
+                            span,
+                            .descr-s {
+                                font-size: 16px;
+                                margin-top: 18px;
+                            }
+                            .tab-more {
+                                cursor: pointer;
+                                padding: 15px 70px;
+                                width: max-content;
+                                max-width: none;
+                                margin: 40px 0 0;
+                                font-family: Inter;
+                                transition: 0.25s all ease;
+                                &:hover {
+                                    border-color: transparent;
+                                    background: #214dde;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1880px) {
+    .case-studio {
+        padding: 70px 0;
+        .container {
+            .case-title {
+                font-size: 96px;
+            }
+            .tabs-block {
+                margin-top: 90px;
+                .tab-content {
+                    .block-content {
+                        margin-top: 0;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 40px;
+                        .block-text {
+                            .descr {
+                                font-size: 20px;
+                            }
+                            span,
+                            .descr-s {
+                                font-size: 18px;
+                                margin-top: 20px;
+                            }
+                            span {
+                                margin-top: 50px;
+                            }
+                            .tab-more {
+                                padding: 15px 90px;
+                                margin: 70px 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

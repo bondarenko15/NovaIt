@@ -65,3 +65,18 @@ const partnerSlider = new Swiper('.partners-slider', {
         1366: { slidesPerView: 6, spaceBetween: 60 },
     }
 });
+
+//Tabs
+
+const tabs = document.querySelectorAll('.tab-item');
+const contents = document.querySelectorAll('.block-content');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const tabId = tab.dataset.tab;
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        contents.forEach(c => c.classList.remove('active'));
+        document.querySelector(`.block-content[data-tab="${tabId}"]`).classList.add('active');
+    });
+});
