@@ -55,7 +55,19 @@
         }
     }
 }
-
+.solutions_page {
+    .base-solutions {
+        h2 {
+            display: none;
+        }
+        .title-text {
+            display: none;
+        }
+        .base-solution_block {
+            margin: 0;
+        }
+    }
+}
 @media (min-width: 768px) {
     .base-solutions {
         padding: 30px 0;
@@ -92,6 +104,17 @@
             }
         }
     }
+    .solutions_page {
+        .base-solutions {
+            .container {
+                .base-solution_block {
+                    .card {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 1366px) {
@@ -105,7 +128,7 @@
                 .card {
                     cursor: pointer;
                     &.semi-medium {
-                       width: auto;
+                        width: auto;
                     }
                     &.large {
                         width: calc(50% - 8px);
@@ -114,16 +137,34 @@
                     &.medium {
                         width: calc(25% - 12px);
                     }
-                    
                 }
                 .card {
                     padding: 20px;
                     gap: 15px;
+                    transition: 0.25s all ease;
+                    &:hover {
+                        box-shadow:
+                            0 0 25.1px 0 rgba(77, 108, 209, 0.75),
+                            2px 2px 1px 0 rgba(43, 64, 130, 0.92);
+                    }
                     .card-title {
                         font-size: 20px;
                     }
                     .card-descr {
                         font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .solutions_page {
+        .base-solutions {
+            padding: 30px 0;
+            .container {
+                .base-solution_block {
+                    gap: 20px;
+                    .card {
+                        width: calc(50% - 20px) !important;
                     }
                 }
             }

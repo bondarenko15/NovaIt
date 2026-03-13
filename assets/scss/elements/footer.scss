@@ -1,0 +1,333 @@
+.footer {
+    .container {
+        padding: 0;
+        .footer-nav {
+            position: relative;
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                background-color: #181719;
+            }
+            .block-content {
+                width: 100%;
+                margin-bottom: 25px;
+                &.solutions,
+                &.industry,
+                &.resources,
+                &.contact {
+                    width: 50%;
+                }
+                .list-title {
+                    display: block;
+                    margin: 0;
+                    width: 100%;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #353636;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #fff;
+                }
+                .footer-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    margin-top: 12px;
+                    padding: 0 15px 0 0;
+                    li {
+                        a {
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: #fff;
+                            line-height: 150%;
+                        }
+                        .email,
+                        .number {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            gap: 15px;
+                            &::before {
+                                content: "";
+                                display: block;
+                                width: 19px;
+                                height: 18px;
+                            }
+                        }
+                        .number {
+                            &::before {
+                                background: url("../img/phone.svg") center center/cover no-repeat;
+                            }
+                        }
+                        .email {
+                            &::before {
+                                width: 19px;
+                                height: 14px;
+                                background: url("../img/email.svg") center center/cover no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-bottom {
+            position: relative;
+            padding: 20px;
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                background-color: #000000;
+            }
+            .social {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 20px;
+            }
+            .privacy {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 50px;
+                a {
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #fff;
+                }
+            }
+            .copyright {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                p {
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 648px) {
+    .footer {
+        padding: 25px 0;
+        .container {
+            .footer-nav {
+                padding: 30px 40px;
+                gap: 35px 0;
+                .block-content {
+                    margin-bottom: 0;
+                    &.solutions {
+                        width: 40%;
+                        .footer-list {
+                            display: block;
+                            columns: 2;
+                            li {
+                                padding: 0 5px 0 0;
+                            }
+                        }
+                    }
+                    &.industry,
+                    &.about {
+                        width: 30%;
+                    }
+                    &.resources {
+                        width: 33.3%;
+                    }
+                    &.contact {
+                        width: 66.6%;
+                    }
+                    .list-title {
+                        padding-bottom: 12px;
+                        font-size: 16px;
+                    }
+                    .footer-list {
+                        li {
+                            a {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .footer-bottom {
+                flex-direction: row;
+                gap: 0;
+                justify-content: space-between;
+                padding: 20px 40px;
+                .social {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 20px;
+                }
+                .privacy {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 50px;
+                    a {
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #fff;
+                    }
+                }
+                .copyright {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    p {
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .footer {
+        .container {
+            .footer-nav {
+                padding: 45px 100px;
+                gap: 0;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                .block-content {
+                    margin-bottom: 0;
+                    &.solutions {
+                        width: 100%;
+                        .footer-list {
+                            display: block;
+                            columns: 2;
+                            li {
+                                padding: 0 5px 0 0;
+                            }
+                        }
+                    }
+                    &.industry,
+                    &.about {
+                        width: 100%;
+                    }
+                    &.resources {
+                        width: 100%;
+                    }
+                    &.contact {
+                        width: 100%;
+                        .number {
+                            &:hover {
+                                &::before {
+                                    background: url("../img/phone-s.svg") center center/cover no-repeat;
+                                }
+                            }
+                        }
+                        .email {
+                            &:hover {
+                                &::before {
+                                    width: 19px;
+                                    height: 14px;
+                                    background: url("../img/email-s.svg") center center/cover no-repeat;
+                                }
+                            }
+                        }
+                    }
+                    .list-title {
+                        padding-bottom: 12px;
+                        font-size: 16px;
+                    }
+                    .footer-list {
+                        li {
+                            a {
+                                font-size: 14px;
+                                &:hover {
+                                    color: #214dde;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .footer-bottom {
+                flex-direction: row;
+                gap: 0;
+
+                justify-content: space-between;
+                padding: 20px 100px;
+                .social {
+                    
+                }
+                .privacy {
+                    a {
+                        font-size: 16px;
+                        &:hover {
+                            color: #214dde;
+                        }
+                    }
+                }
+                .copyright {
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1880px) {
+    .footer {
+        padding: 70px 0 0;
+        .container {
+            .footer-nav {
+                padding: 45px 220px;
+                .block-content {
+                    .list-title {
+                        padding-bottom: 12px;
+                        font-size: 18px;
+                    }
+                    .footer-list {
+                        li {
+                            a {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+            .footer-bottom {
+                padding: 20px 220px;
+                .privacy {
+                    a {
+                        font-size: 18px;
+                    }
+                }
+                .copyright {
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

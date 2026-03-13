@@ -199,6 +199,11 @@
                     gap: 60px;
                     .tab-item {
                         cursor: pointer;
+                        &:hover {
+                            img {
+                                opacity: .75;
+                            }
+                        }
                         img {
                             width: 150px;
                         }

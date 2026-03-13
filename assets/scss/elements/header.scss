@@ -317,8 +317,13 @@
                                 }
                             }
                         }
-
-                        .list-lang.open {
+                        &:hover {
+                            .list-lang {
+                                visibility: visible;
+                                overflow: visible;
+                                transition: 0.25s all ease;
+                                opacity: 1;
+                            }
                         }
                     }
                     .header-lang.active {
@@ -377,6 +382,10 @@
                     font-weight: 500;
                     padding: 14px 20px;
                     border-radius: 35px;
+                    &:hover {
+                        color: #214DDE;
+                        
+                    }
                 }
             }
         }

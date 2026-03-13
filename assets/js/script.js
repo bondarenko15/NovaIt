@@ -39,11 +39,21 @@ const current = document.querySelector('.current-lang');
 
 current.addEventListener('click', (e) => {
     e.stopPropagation();
-    lang.classList.toggle('active');
+    if (window.innerWidth <= 1366) {
+        lang.classList.toggle('active');
+    }
 });
 
 document.addEventListener('click', (e) => {
-    if (!lang.contains(e.target)) {
+    if (window.innerWidth <= 1366) {
+        if (!lang.contains(e.target)) {
+            lang.classList.remove('active');
+        }
+    }
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1366) {
         lang.classList.remove('active');
     }
 });
@@ -66,6 +76,22 @@ const partnerSlider = new Swiper('.partners-slider', {
     }
 });
 
+
+//Slider review
+
+const sliderReview = new Swiper('.slider-review', {
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    loop: true,
+    spaceBetween: 30,
+    initialSlide: 1,
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+    }
+});
+
+
 //Tabs
 
 const tabs = document.querySelectorAll('.tab-item');
@@ -80,3 +106,4 @@ tabs.forEach(tab => {
         document.querySelector(`.block-content[data-tab="${tabId}"]`).classList.add('active');
     });
 });
+

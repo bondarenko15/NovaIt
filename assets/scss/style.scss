@@ -1,26 +1,26 @@
-@use 'style_elements/normalize' as *;
-@use 'style_elements/animation' as *;
-@use 'style_elements/fonts' as *;
-@use 'style_elements/swiper-bundle' as *;
-@use 'sections/textRigth' as *;
-@use 'sections/ourPartners' as *;
-@use 'sections/advantages' as *;
-@use 'sections/readyContact' as *;
-@use 'sections/caseStudio' as *;
-@use 'sections/newsBase' as *;
-@use 'sections/baseSolutions' as *;
-@use 'elements/breadcrumbs' as *;
-@use 'elements/title_section' as *;
-@use 'elements/sliders' as *;
-@use 'elements/header' as *;
-@use 'elements/button' as *;
-@use 'pages/index' as *;
-@use 'style_elements/animation' as *;
-
-
-
-
-
+@use "style_elements/normalize" as *;
+@use "style_elements/animation" as *;
+@use "style_elements/fonts" as *;
+@use "style_elements/animation" as *;
+@use "elements/form" as *;
+@use "style_elements/swiper-bundle" as *;
+@use "sections/textRigth" as *;
+@use "sections/ourPartners" as *;
+@use "sections/sliderAbout" as *;
+@use "sections/advantages" as *;
+@use "sections/readyContact" as *;
+@use "sections/caseStudio" as *;
+@use "sections/newsBase" as *;
+@use "sections/bannerPages" as *;
+@use "sections/baseSolutions" as *;
+@use "elements/breadcrumbs" as *;
+@use "elements/title_section" as *;
+@use "elements/sliders" as *;
+@use "elements/footer" as *;
+@use "elements/header" as *;
+@use "elements/button" as *;
+@use "pages/index" as *;
+@use "pages/contacts" as *;
 
 body {
     min-height: 100vh;
@@ -54,6 +54,7 @@ html {
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
+    transition: 0.25s all ease;
 }
 
 *:before,
@@ -83,7 +84,7 @@ input[type="submit"] {
     appearance: none;
 }
 
-input:not([type=checkbox]):not([type=radio]),
+input:not([type="checkbox"]):not([type="radio"]),
 textarea,
 select {
     -webkit-appearance: none;
@@ -119,7 +120,6 @@ a {
     width: 100%;
     padding: 0 20px;
     position: relative;
-
 }
 
 @media (min-width: 648px) {
