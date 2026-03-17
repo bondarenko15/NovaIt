@@ -1,3 +1,125 @@
-.form {
+.custom-contact-form {
     margin-top: 30px;
+
+    .contact-form-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .contact-form-field {
+            width: 100%;
+            input,
+            select,
+            textarea {
+                width: 100%;
+                padding: 14px;
+                border: 1px solid #d1d4e0;
+                border-radius: 5px;
+                font-family: Poppins;
+                font-weight: 300;
+                font-size: 16px;
+            }
+            textarea {
+                min-height: 130px;
+            }
+            &.select-input {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    transform: translateY(-50%);
+                    background: url("../img/arrow-select.svg") center center/cover no-repeat;
+                    top: 50%;
+                    right: 7%;
+                    display: block;
+                    width: 11px;
+                    height: 6px;
+                    transition: 0.1s all ease;
+                }
+                &:focus-within {
+                    select {
+                        outline: none;
+                    }
+                    &::before {
+                        transform: translateY(-50%) rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+    .contact-form-bottom {
+        margin-top: 15px;
+        .contact-submit {
+            width: 100%;
+            max-width: 335px;
+            margin: 0 auto;
+            border-radius: 35px;
+            border: 1px solid #214dde;
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 15px 30px;
+            text-align: center;
+            background: transparent;
+            color: #214dde;
+        }
+    }
+}
+
+@media (min-width: 648px) {
+    .custom-contact-form {
+        margin-top: 35px;
+
+        .contact-form-grid {
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: wrap;
+            .contact-form-field {
+                width: calc(50% - 10px);
+                input,
+                select {
+                    padding: 18px;
+                }
+                textarea {
+                    padding: 18px;
+                    font-size: 16px;
+                }
+                &.select-input {
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        transform: translateY(-50%);
+                        background: url("../img/arrow-select.svg") center center/cover no-repeat;
+                        top: 50%;
+                        right: 7%;
+                        display: block;
+                        width: 11px;
+                        height: 6px;
+                        transition: 0.1s all ease;
+                    }
+                    &:focus-within {
+                        select {
+                            outline: none;
+                        }
+                        &::before {
+                            transform: translateY(-50%) rotate(180deg);
+                        }
+                    }
+                }
+            }
+            .contact-form-field:has(textarea) {
+                width: 100%;
+            }
+        }
+        .contact-form-bottom {
+            margin-top: 20px;
+            .contact-submit {
+                max-width: 250px;
+                font-size: 16px;
+                padding: 15px 30px;
+            }
+        }
+    }
 }

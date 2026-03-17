@@ -15,7 +15,8 @@
 
             .header-burger {
                 width: 25%;
-
+                border: none;
+                background: transparent;
                 span {
                     width: 20px;
                     height: 2px;
@@ -383,8 +384,7 @@
                     padding: 14px 20px;
                     border-radius: 35px;
                     &:hover {
-                        color: #214DDE;
-                        
+                        color: #214dde;
                     }
                 }
             }

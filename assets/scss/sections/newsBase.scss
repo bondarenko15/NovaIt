@@ -165,8 +165,9 @@
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: flex-start;
+                flex-wrap: wrap;
                 li {
-                    width: calc(33% - 9px);
+                    width: calc(33% - 10px);
                     a {
                         height: 380px;
                         padding: 20px;

@@ -4,6 +4,7 @@
 @use "style_elements/animation" as *;
 @use "elements/form" as *;
 @use "style_elements/swiper-bundle" as *;
+@use "sections/mobile-menu" as *;
 @use "sections/textRigth" as *;
 @use "sections/ourPartners" as *;
 @use "sections/sliderAbout" as *;
@@ -21,6 +22,7 @@
 @use "elements/button" as *;
 @use "pages/index" as *;
 @use "pages/contacts" as *;
+@use "pages/about-us" as *;
 
 body {
     min-height: 100vh;
