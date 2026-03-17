@@ -1,54 +1,186 @@
 .partners_page {
     .partners {
         padding: 30px 0;
-        .container {
-            .scroll-blocks {
-                width: 100%;
-                position: relative;
-                height: 100vh;
-                margin-top: 60px;
-                .scroll-inner {
-                    .scroll-block {
+        .swiper {
+            width: 100%;
+            padding: 0 20px;
+            .swiper-wrapper {
+                .swiper-slide {
+                    height: auto;
+                    position: relative;
+                    padding: 25px 20px;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    .background {
                         position: absolute;
                         inset: 0;
-                        padding: 25px 20px 60px;
-                        border-radius: 20px;
-                        overflow: hidden;
-                        margin: -60px 0 0;
-                        --i: 0;
-                        transform: translateY(calc(var(--i) * 40px));
-                        height: max-content;
-                        z-index: calc(100 - var(--i));
-                        .background {
+                        z-index: -1;
+                        &::before {
+                            content: "";
                             position: absolute;
                             inset: 0;
-                            z-index: -1;
-                            img {
-                                height: 100%;
-                                width: 100%;
-                                object-fit: cover;
-                                display: block;
-                            }
+                            background: rgba(0, 0, 0, 0.48);
+                            z-index: 0;
                         }
-                        .block-top {
+                        img {
                             width: 100%;
-                            display: flex;
-                            justify-content: center;
-                            img {
-                                display: block;
-                                min-width: 120px;
-                            }
+                            height: 100%;
+                            object-fit: cover;
+                            display: block;
                         }
-                        .content-block {
-                            margin-top: 20px;
+                    }
+                    .content-block {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 20px;
+                        .logo {
+                            max-width: 150px;
+                        }
+                        p {
+                            font-family: Poppins;
+                            font-weight: 400;
+                            font-size: 14px;
+                            color: #fff;
+                        }
+                        ul {
                             display: flex;
                             flex-direction: column;
-                            gap: 15px;
-                            p {
+                            gap: 10px;
+                            li {
+                                display: flex;
+                                margin: 0;
                                 font-family: Poppins;
                                 font-size: 14px;
                                 font-weight: 400;
                                 color: #fff;
+                                gap: 10px;
+                                &::before {
+                                    content: "";
+                                    width: 5px;
+                                    border-radius: 50px;
+                                    flex-shrink: 0;
+                                    height: 5px;
+                                    margin: 8px 0 0 0;
+                                    display: block;
+                                    background: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .swiper-pagination {
+                position: static;
+                margin: 30px 0 0;
+                .swiper-pagination-bullet {
+                    background: #181719;
+                    opacity: 1;
+                    width: 10px;
+                    height: 10px;
+                    &.swiper-pagination-bullet-active {
+                        background: #214dde;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 648px) {
+    .partners_page {
+        .partners {
+            padding: 40px 0;
+            .swiper {
+                padding: 0 40px;
+                overflow: hidden;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        padding: 35px 20px;
+                        .content-block {
+                            .logo {
+                                max-width: 200px;
+                                width: 100%;
+                            }
+                            p {
+                                font-size: 16px;
+                            }
+                            ul {
+                                li {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .partners_page {
+        .partners {
+            padding: 60px 0;
+            .swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        padding: 35px 20px;
+                        width: 900px;
+                        transition:
+                            transform 0.4s ease,
+                            opacity 0.4s ease,
+                            filter 0.4s ease;
+                        transform: scale(0.85);
+                        opacity: 0.9;
+                        filter: blur(4px);
+                        .content-block {
+                            .logo {
+                                max-width: 200px;
+                                width: 100%;
+                            }
+                            p {
+                                font-size: 16px;
+                            }
+                            ul {
+                                li {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                    .swiper-slide-active {
+                        transform: scale(1);
+                        opacity: 1;
+                        filter: blur(0);
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1880px) {
+    .partners_page {
+        .partners {
+            padding: 70px 0;
+            .swiper {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        padding: 40px 50px;
+                        width: 1200px;
+                        .content-block {
+                            .logo {
+                                max-width: 300px;
+                                width: 100%;
+                            }
+                            p {
+                                font-size: 18px;
+                            }
+                            ul {
+                                li {
+                                    font-size: 18px;
+                                }
                             }
                         }
                     }

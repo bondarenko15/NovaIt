@@ -171,67 +171,45 @@ document.addEventListener('click', (e) => {
 });
 
 
-const container = document.querySelector('.scroll-blocks');
-const cards = document.querySelectorAll('.scroll-block');
 
-function updateContainerHeight() {
-    let maxBottom = 0;
 
-    cards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        const containerRect = container.getBoundingClientRect();
 
-        const bottom = rect.bottom - containerRect.top;
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 1,
+    autoHeight: true,
+    spaceBetween: 50,
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+    breakpoints: {
+        960: {
+            spaceBetween: 80,
+        },
+        1366: {
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+        },
+    },
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    observer: true,
+    observeParents: true,
+    
+});
 
-        if (bottom > maxBottom) {
-            maxBottom = bottom;
-        }
+swiper.on('slideChange', () => {
+    let maxHeight = 0;
+    swiper.slides.forEach(slide => {
+        const h = slide.offsetHeight;
+        if (h > maxHeight) maxHeight = h;
     });
-
-    container.style.height = maxBottom + 'px';
-}
-
-updateContainerHeight();
-window.addEventListener('resize', updateContainerHeight);
-
-
-
-
-
-
-gsap.registerPlugin(ScrollTrigger);
-
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    const section = document.querySelector(".scroll-blocks");
-    const inner = document.querySelector(".scroll-inner"); // обертка карточек
-    const cards = gsap.utils.toArray(".scroll-block");
-    const cardHeight = cards[0].offsetHeight;
-    const totalHeight = cardHeight * cards.length;
-
-    // фиксируем блок по центру на время скролла карточек
-    ScrollTrigger.create({
-        trigger: section,
-        start: "top top",
-        end: () => `+=${totalHeight}`,
-        pin: inner, // фиксируем только обертку с карточками
-        pinSpacing: true, // оставляем место, чтобы страница скроллилась дальше
-    });
-
-    // анимация карточек
-    cards.forEach((card, i) => {
-        card.style.zIndex = cards.length - i;
-
-        gsap.to(card, {
-            y: -cardHeight,
-            opacity: 0,
-            scrollTrigger: {
-                trigger: section,
-                start: () => `top top+=${i * cardHeight}`,
-                end: () => `+=${cardHeight}`,
-                scrub: true,
-            }
-        });
-    });
+    swiper.el.style.height = maxHeight + 'px'; // <-- заменили $el[0] на el
 });
