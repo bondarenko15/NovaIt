@@ -23,6 +23,9 @@
 @use "pages/index" as *;
 @use "pages/contacts" as *;
 @use "pages/about-us" as *;
+@use "pages/security" as *;
+@use "pages/article" as *;
+@use "pages/partners" as *;
 
 body {
     min-height: 100vh;

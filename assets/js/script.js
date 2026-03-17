@@ -1,4 +1,8 @@
 AOS.init();
+const fancyBox = document.querySelector('.certificates') || null;
+if (fancyBox) {
+    Fancybox.bind("[data-fancybox]", {});
+}
 
 
 const searchToggle = document.querySelector('.search-active');
@@ -22,9 +26,9 @@ window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
 
     if (currentScroll > lastScroll) {
-        header.classList.add('hide');
+        header.classList.add('scroll');
     } else {
-        header.classList.remove('hide');
+        header.classList.remove('scroll');
     }
 
     lastScroll = currentScroll;
@@ -58,9 +62,14 @@ document.addEventListener('click', (e) => {
     }
 });
 
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 1366) {
-        lang.classList.remove('active');
+
+
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY >= 10) {
+        header.classList.add('scroll');
+    } else {
+        header.classList.remove('scroll');
     }
 });
 
@@ -159,4 +168,70 @@ document.addEventListener('click', (e) => {
         document.querySelectorAll('li.open').forEach(el => el.classList.remove('open'));
         document.querySelectorAll('.nav-list').forEach(el => el.classList.remove('open'));
     }
+});
+
+
+const container = document.querySelector('.scroll-blocks');
+const cards = document.querySelectorAll('.scroll-block');
+
+function updateContainerHeight() {
+    let maxBottom = 0;
+
+    cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+
+        const bottom = rect.bottom - containerRect.top;
+
+        if (bottom > maxBottom) {
+            maxBottom = bottom;
+        }
+    });
+
+    container.style.height = maxBottom + 'px';
+}
+
+updateContainerHeight();
+window.addEventListener('resize', updateContainerHeight);
+
+
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const section = document.querySelector(".scroll-blocks");
+    const inner = document.querySelector(".scroll-inner"); // обертка карточек
+    const cards = gsap.utils.toArray(".scroll-block");
+    const cardHeight = cards[0].offsetHeight;
+    const totalHeight = cardHeight * cards.length;
+
+    // фиксируем блок по центру на время скролла карточек
+    ScrollTrigger.create({
+        trigger: section,
+        start: "top top",
+        end: () => `+=${totalHeight}`,
+        pin: inner, // фиксируем только обертку с карточками
+        pinSpacing: true, // оставляем место, чтобы страница скроллилась дальше
+    });
+
+    // анимация карточек
+    cards.forEach((card, i) => {
+        card.style.zIndex = cards.length - i;
+
+        gsap.to(card, {
+            y: -cardHeight,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: section,
+                start: () => `top top+=${i * cardHeight}`,
+                end: () => `+=${cardHeight}`,
+                scrub: true,
+            }
+        });
+    });
 });
