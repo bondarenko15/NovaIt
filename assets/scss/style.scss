@@ -13,6 +13,7 @@
 @use "sections/caseStudio" as *;
 @use "sections/newsBase" as *;
 @use "sections/bannerPages" as *;
+@use "sections/modal-form" as *;
 @use "sections/baseSolutions" as *;
 @use "elements/breadcrumbs" as *;
 @use "elements/title_section" as *;
@@ -26,6 +27,10 @@
 @use "pages/security" as *;
 @use "pages/article" as *;
 @use "pages/partners" as *;
+@use "pages/case" as *;
+
+
+
 
 body {
     min-height: 100vh;

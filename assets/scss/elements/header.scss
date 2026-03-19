@@ -294,7 +294,7 @@
 
                         .list-lang {
                             border: 1px solid #214dde;
-                            background: #000104;
+                            background-color: rgba(0, 0, 0, 0.85);
                             padding: 20px;
                             display: flex;
                             flex-direction: column;
@@ -470,8 +470,6 @@
                         }
 
                         .list-lang {
-                            border: 1px solid #214dde;
-                            background: #000104;
                             padding: 20px;
                             display: flex;
                             flex-direction: column;
@@ -498,9 +496,6 @@
                                     }
                                 }
                             }
-                        }
-
-                        .list-lang.open {
                         }
                     }
                     .header-lang.active {

@@ -1,0 +1,51 @@
+<div class="modal active" id="formModal">
+  <div class="modal__overlay"></div>
+  <div class="modal__content">
+    <div class="modal__content-top">
+      <button class="modal__close">×</button>
+      <h4 class="form-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+    </div>
+    <form class="custom-contact-form custom-form_modal" id="custom-contact-form-modal">
+      <div class="contact-form-grid">
+        <div class="contact-form-field">
+          <input type="text" name="name" placeholder="Name" required="">
+        </div>
+
+        <div class="contact-form-field">
+          <input type="email" name="email" placeholder="Email" required="">
+        </div>
+
+        <div class="contact-form-field">
+          <input type="text" name="company" placeholder="Company name">
+        </div>
+
+        <div class="contact-form-field select-input"></div>
+
+        <div class="contact-form-field full-width">
+          <textarea name="message" placeholder="Message" required=""></textarea>
+        </div>
+      </div>
+
+      <input type="hidden" name="action" value="mytheme_send_contact_form">
+      <input type="hidden" name="nonce" value="2effcfe821">
+
+      <div class="contact-form-bottom">
+        <button type="submit" class="contact-submit">
+          Send </button>
+
+        <div class="contact-form-response" aria-live="polite"></div>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+
+<div class="modal" id="thanksModal">
+  <div class="modal__overlay"></div>
+  <div class="modal__content modal__content--center">
+    <button class="modal__close">×</button>
+    <p>Ваша заявка отправлена</p>
+    <button class="modal__ok">Окей</button>
+  </div>
+</div>

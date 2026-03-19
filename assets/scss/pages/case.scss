@@ -1,0 +1,655 @@
+.case_page {
+    .case-video {
+        padding: 30px 0;
+        .container {
+            .flex-block {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                .video-title {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    .title {
+                        font-family: Poppins;
+                        font-weight: 500;
+                        font-size: 30px;
+                        font-style: italic;
+                        color: #727a97;
+                        line-height: 40px;
+                        i {
+                            color: #17181a;
+                        }
+                    }
+                    .descr {
+                        font-family: Poppins;
+                        font-weight: 400;
+                        font-size: 18px;
+                        font-style: italic;
+                        color: #727a97;
+                    }
+                }
+                .video-block {
+                    .video-item {
+                        width: 100%;
+                        overflow: hidden;
+                        border-radius: 20px;
+                        iframe {
+                            width: 100%;
+                            min-height: 220px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .case-advantages {
+        padding: 30px 0;
+        .container {
+            .flex-block {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: stretch;
+                gap: 20px;
+                .advantages-item {
+                    width: calc(50% - 10px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 10px;
+                    .percent {
+                        font-family: Poppins;
+                        font-weight: 700;
+                        font-size: 45px;
+                        color: #214dde;
+                    }
+                    .descr {
+                        display: block;
+                        text-align: center;
+                        font-family: Poppins;
+                        font-weight: 400;
+                        font-size: 14px;
+                        font-style: italic;
+                        max-width: 50%;
+                    }
+                }
+            }
+        }
+    }
+    .case-cards {
+        padding: 30px 0;
+        .container {
+            .flex-block {
+                display: flex;
+                justify-content: flex-start;
+                align-items: stretch;
+                gap: 10px;
+                flex-wrap: wrap;
+                .card-item {
+                    width: 100%;
+                    box-shadow:
+                        0 2.27px 2.21px 0 rgba(23, 30, 108, 0.06),
+                        0 6.65px 5.32px 0 rgba(23, 30, 108, 0.33);
+                    background:
+                        linear-gradient(#fff, #fff) padding-box,
+                        linear-gradient(300deg, #fff, #4d6cd1) border-box;
+                    border-radius: 20px;
+                    padding: 20px;
+                    border: 2px solid transparent;
+                    display: flex;
+                    gap: 10px;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    .card-title {
+                        font-family: Poppins;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #17181a;
+                        display: block;
+                        margin: 0;
+                        text-align: left;
+                    }
+                    .card-descr {
+                        font-family: Poppins;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #17181a;
+                    }
+                }
+            }
+        }
+    }
+    .case-quote {
+        padding: 30px 0;
+        .container {
+            .flex-block {
+                display: flex;
+                gap: 40px;
+                flex-direction: column-reverse;
+                .quote-foto {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .img {
+                        width: 100%;
+                        overflow: hidden;
+                        border-radius: 20px;
+                        img {
+                            width: 100%;
+                            height: auto;
+                            object-fit: cover;
+                            display: block;
+                        }
+                    }
+                    .name {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 7px;
+                        .title {
+                            font-family: Poppins;
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #17181a;
+                        }
+                        .descr {
+                            font-family: Poppins;
+                            font-size: 12px;
+                            font-weight: 400;
+                            color: #17181a;
+                            display: block;
+                        }
+                    }
+                }
+                .quote-text {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    .text-title {
+                        display: block;
+                        margin: 0;
+                        font-family: Poppins;
+                        font-size: 28px;
+                        font-weight: 500;
+                        line-height: 40px;
+                        color: #17181a;
+                        font-style: italic;
+                    }
+                    .text-descr {
+                        font-family: Poppins;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #727a97;
+                    }
+                }
+            }
+        }
+    }
+    .constructor {
+        padding: 0 0 60px;
+        .container {
+            .block-constructor {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .descr {
+                    font-family: Poppins;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #17181a;
+                }
+                .title {
+                    font-family: Poppins;
+                    font-size: 20px;
+                    font-weight: 500;
+                    font-style: italic;
+                    color: #17181a;
+                }
+                .img {
+                    margin: 10px 0;
+                    width: 100%;
+                    overflow: hidden;
+                    border-radius: 20px;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        min-height: 180px;
+                        display: block;
+                        object-fit: cover;
+                    }
+                }
+                .block-quote {
+                    border: 2px solid transparent;
+                    border-radius: 20px;
+                    background:
+                        linear-gradient(#fff, #fff) padding-box,
+                        linear-gradient(300deg, #fff, #4d6cd1) border-box;
+                    box-shadow:
+                        0 2.27px 2.21px 0 rgba(23, 30, 108, 0.06),
+                        0 6.65px 5.32px 0 rgba(23, 30, 108, 0.33);
+                    display: flex;
+                    flex-direction: column;
+                    padding: 15px;
+                    .quote-title {
+                        font-family: Poppins;
+                        font-size: 20px;
+                        font-weight: 500;
+                        font-style: italic;
+                        color: #17181a;
+
+                        i {
+                            color: #214dde;
+                        }
+                    }
+                    .name {
+                        font-family: Poppins;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #17181a;
+                        display: block;
+                        margin-top: 15px;
+                    }
+                    .descr {
+                        font-family: Poppins;
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: #17181a;
+                        display: block;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 648px) {
+    .case_page {
+        .case-video {
+            padding: 40px 0;
+            .container {
+                .flex-block {
+                    gap: 30px;
+                    .video-title {
+                        gap: 20px;
+                        .title {
+                            font-size: 40px;
+                            line-height: 100%;
+                            display: block;
+                            i {
+                                color: #17181a;
+                                display: block;
+                            }
+                        }
+                        .descr {
+                            font-size: 18px;
+                        }
+                    }
+                    .video-block {
+                        .video-item {
+                            iframe {
+                                min-height: 360px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .case-advantages {
+            padding: 40px 0;
+            .container {
+                .flex-block {
+                    .advantages-item {
+                        width: calc(25% - 15px);
+                        .percent {
+                            font-size: 45px;
+                        }
+                        .descr {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .case-cards {
+            padding: 40px 0;
+            .container {
+                .flex-block {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: stretch;
+                    gap: 20px;
+                    flex-wrap: wrap;
+                    .card-item {
+                        width: calc(50% - 10px);
+                        padding: 25px 20px;
+                        .card-title {
+                            font-size: 20px;
+                        }
+                        .card-descr {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        .case-quote {
+            padding: 40px 0;
+            .container {
+                .flex-block {
+                    gap: 20px;
+                    flex-direction: row;
+                    .quote-foto {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        width: calc(35% - 10px);
+                        .img {
+                            flex-shrink: 0;
+                        }
+                        .name {
+                            gap: 10px;
+                            .title {
+                                font-size: 16px;
+                            }
+                            .descr {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    .quote-text {
+                        gap: 25px;
+                        width: calc(65% - 10px);
+                        .text-title {
+                            font-size: 35px;
+                            line-height: 46px;
+                        }
+                        .text-descr {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        .constructor {
+            padding: 0 0 60px;
+            .container {
+                .block-constructor {
+                    margin-top: 20px;
+                    gap: 20px;
+                    .descr {
+                        font-size: 16px;
+                    }
+                    .title {
+                        font-size: 24px;
+                    }
+                    .img {
+                        margin: 15px 0;
+                        img {
+                            width: 100%;
+                            min-height: 300px;
+                        }
+                    }
+                    .block-quote {
+                        padding: 20px 25px;
+                        .quote-title {
+                            font-size: 24px;
+                        }
+                        .name {
+                            font-size: 18px;
+                            margin-top: 15px;
+                        }
+                        .descr {
+                            font-size: 14px;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .case_page {
+        .case-video {
+            padding: 60px 0;
+            .container {
+                .flex-block {
+                    flex-direction: row;
+                    gap: 20px;
+                    .video-title {
+                        gap: 25px;
+                        width: calc(50% - 10px);
+                        .title {
+                            font-size: 45px;
+                        }
+                        .descr {
+                            font-size: 20px;
+                        }
+                    }
+                    .video-block {
+                        width: calc(50% - 10px);
+                        .video-item {
+                            iframe {
+                                min-height: 320px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .case-advantages {
+            padding: 60px 0;
+            .container {
+                .flex-block {
+                    .advantages-item {
+                        .percent {
+                            font-size: 54px;
+                        }
+                        .descr {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        .case-cards {
+            padding: 60px 0;
+            .container {
+                .flex-block {
+                    .card-item {
+                        width: calc(33% - 15px);
+                        padding: 25px 30px;
+                        .card-title {
+                            font-size: 20px;
+                        }
+                        .card-descr {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        .case-quote {
+            padding: 60px 0;
+            .container {
+                .flex-block {
+                    gap: 120px;
+                    .quote-foto {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        width: calc(35% - 60px);
+                        .img {
+                            flex-shrink: 0;
+                        }
+                        .name {
+                            .title {
+                                font-size: 20px;
+                            }
+                            .descr {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    .quote-text {
+                        width: calc(65% - 60px);
+                        .text-title {
+                            font-size: 45px;
+                            line-height: 140%;
+                        }
+                        .text-descr {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .constructor {
+            padding: 0 0 100px;
+            .container {
+                .block-constructor {
+                    margin-top: 25px;
+                    gap: 25px;
+                    .descr {
+                        font-size: 16px;
+                    }
+                    .title {
+                        font-size: 32px;
+                    }
+                    .img {
+                        margin: 15px 0;
+                        img {
+                            min-height: 550px;
+                        }
+                    }
+                    .block-quote {
+                        padding: 35px 30px;
+                        .quote-title {
+                            font-size: 32px;
+                        }
+                        .name {
+                            font-size: 20px;
+                            margin-top: 30px;
+                        }
+                        .descr {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1880px) {
+    .case_page {
+        .case-video {
+            padding: 70px 0;
+            .container {
+                .flex-block {
+                    gap: 40px;
+                    .video-title {
+                        gap: 30px;
+                        width: calc(50% - 20px);
+                        .title {
+                            font-size: 51px;
+                        }
+                    }
+                    .video-block {
+                        width: calc(50% - 20px);
+                        .video-item {
+                            iframe {
+                                min-height: 380px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .case-advantages {
+            padding: 70px 0;
+            .container {
+                .flex-block {
+                    .advantages-item {
+                        .percent {
+                            font-size: 64px;
+                        }
+                    }
+                }
+            }
+        }
+        .case-cards {
+            padding: 70px 0;
+            .container {
+                .flex-block {
+                    .card-item {
+                        gap: 15px;
+                        .card-title {
+                            font-size: 24px;
+                        }
+                        .card-descr {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .case-quote {
+            padding: 70px 0;
+            .container {
+                .flex-block {
+                    gap: 150px;
+                    .quote-foto {
+                        gap: 10px;
+                        width: calc(35% - 75px);
+                    }
+                    .quote-text {
+                        width: calc(65% - 60px);
+                        .text-title {
+                            font-size: 51px;
+                            line-height: 140%;
+                        }
+                        .text-descr {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .constructor {
+            padding: 0 0 150px;
+            .container {
+                .block-constructor {
+                    margin-top: 25px;
+                    gap: 25px;
+                    .descr {
+                        font-size: 18px;
+                    }
+                    .title {
+                        font-size: 36px;
+                    }
+                    .img {
+                        margin: 20px 0;
+                        img {
+                            min-height: 600px;
+                        }
+                    }
+                    .block-quote {
+                        padding: 40px 50px;
+                        .quote-title {
+                            font-size: 36px;
+                        }
+                        .name {
+                            margin-top: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
