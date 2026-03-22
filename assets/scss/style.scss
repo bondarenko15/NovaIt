@@ -28,7 +28,8 @@
 @use "pages/article" as *;
 @use "pages/partners" as *;
 @use "pages/case" as *;
-
+@use "pages/cases" as *;
+@use "pages/404" as *;
 
 
 
@@ -38,6 +39,11 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+}
+body:has(header + .error_page) {
+    header {
+        background: #000104;   
+    }
 }
 .no-scroll {
     overflow: hidden;

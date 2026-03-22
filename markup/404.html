@@ -13,72 +13,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css">
     <link rel="stylesheet" href="css/style.min.css" data-inprogress="">
 </head>
 
 <body>
-
-    <div class="mobile-menu">
-    <div class="container">
-        <div class="mobile-top">
-            <button class="close-menu">
-                <img src="img/close.svg" alt="">
-            </button>
-        </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">About us</a>
-                </li>
-                <li>
-                    <a href="#">Solutions</a>
-                    <button class="nav-arrow"></button>
-                    <ul class="nav-list">
-                        <li>
-                            <a href="#">Our Mission</a>
-                        </li>
-                        <li>
-                            <a href="#">Our Mission</a>
-                        </li>
-                        <li>
-                            <a href="#">Our Mission</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Your Industry</a>
-                </li>
-                <li>
-                    <a href="#">Partners</a>
-                </li>
-                <li>
-                    <a href="#">Resources</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="header-lang">
-            <span class="current-lang">En</span>
-            <ul class="list-lang">
-                <li>
-                    <a href="#">Ua</a>
-                </li>
-                <li>
-                    <a href="#">Ru</a>
-                </li>
-            </ul>
-        </div>
-        <button class="header-contact ">Contact Us</button>
+    <div class="modal" id="formModal">
+  <div class="modal__overlay"></div>
+  <div class="modal__content">
+    <div class="modal__content-top">
+      <button class="modal__close">×</button>
+      <h4 class="form-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
     </div>
+    <form class="custom-contact-form custom-form_modal" id="custom-contact-form-modal">
+      <div class="contact-form-grid">
+        <div class="contact-form-field">
+          <input type="text" name="name" placeholder="Name" required="">
+        </div>
+
+        <div class="contact-form-field">
+          <input type="email" name="email" placeholder="Email" required="">
+        </div>
+
+        <div class="contact-form-field">
+          <input type="text" name="company" placeholder="Company name">
+        </div>
+
+        <div class="contact-form-field select-input"></div>
+
+        <div class="contact-form-field full-width">
+          <textarea name="message" placeholder="Message" required=""></textarea>
+        </div>
+      </div>
+
+      <input type="hidden" name="action" value="mytheme_send_contact_form">
+      <input type="hidden" name="nonce" value="2effcfe821">
+
+      <div class="contact-form-bottom">
+        <button type="submit" class="contact-submit">
+          Send </button>
+
+        <div class="contact-form-response" aria-live="polite"></div>
+      </div>
+    </form>
+
+  </div>
 </div>
 
-    
+
+<div class="modal" id="thanksModal">
+  <div class="modal__overlay"></div>
+  <div class="modal__content modal__content--center">
+    <button class="modal__close">×</button>
+    <p>Ваша заявка отправлена</p>
+    <button class="modal__ok">Окей</button>
+  </div>
+</div>
+
     <header class="header">
     <div class="container">
         <div class="header-flex">
@@ -149,83 +139,18 @@
     </div>
 </header>
 
-    <div class="security_page">
-        <section class="banner-pages">
-    <div class="background">
-        <img src="img/banner-d.png" alt="" class="desktop">
-        <img src="img/banner-m.png" alt="" class="mobile">
-    </div>
-    <h1 class="banner-title">News</h1>
-</section>
-        <section class="text-title" data-aos="fade-right">
-            <div class="container">
-                <h2 class="block-title">LLC <a href="#">«NOVA IT»</a> is a company operating in the field of IT, </h2>
-                <p class="block-descr">including through the provision of engineering services for the development,
-                    implementation, support and development of software.</p>
-            </div>
-        </section>
-        <section class="content-block" data-aos="fade-up">
-            <div class="container">
-                <div class="flex-block">
-                    <div class="block-item">
-                        <div class="text">
-                            <p>The implementation of these activities is related to the management of information which
-                                is one of the key assets of the Company.The information security policy of the Company
-                                sets goals and objectives in the field of information security, which guide the Company
-                                in its activities.As part of the overall management development, the Company implements
-                                the information security management system (hereinafter — “ISMS”) which complies with
-                                the international standard ISO/IEC 27001: 2013, requirements of the legislation of
-                                Ukraine, regulatory and contractual obligations of the Company in terms of information
-                                security.</p>
-                            <p>In accordance with established procedures in the field of risk management, we carry out
-                                regular assessment of information security risks. It takes into account the probability
-                                of threats to information security and the degree of their impact on business processes,
-                                financial condition and business reputation of the Company.</p>
-                        </div>
-                        <div class="img">
-                            <img src="img/security.png" alt="">
-                        </div>
-                    </div>
-                    <div class="block-item reverse">
-                        <div class="text">
-                            <p>The implementation of these activities is related to the management of information which
-                                is one of the key assets of the Company.The information security policy of the Company
-                                sets goals and objectives in the field of information security, which guide the Company
-                                in its activities.As part of the overall management development, the Company implements
-                                the information security management system (hereinafter — “ISMS”) which complies with
-                                the international standard ISO/IEC 27001: 2013, requirements of the legislation of
-                                Ukraine, regulatory and contractual obligations of the Company in terms of information
-                                security.</p>
-                            <p>In accordance with established procedures in the field of risk management, we carry out
-                                regular assessment of information security risks. It takes into account the probability
-                                of threats to information security and the degree of their impact on business processes,
-                                financial condition and business reputation of the Company.</p>
-                        </div>
-                        <div class="img">
-                            <img src="img/security.png" alt="">
-                        </div>
-                    </div>
+    <section class="error_page">
+        <div class="container">
+            <div class="block-flex">
+                <div class="img">
+                    <img src="img/404.svg" alt="">
                 </div>
-                <a href="#" class="link-pdf" target="_blank">Information Security Policy</a>
+                <span class="error">oops</span>
+                <p class="descr">It looks like we can't find the page you're looking for.</p>
+                <a href="#" class="link-home">Home</a>
             </div>
-        </section>
-        <section class="certificates" data-aos="fade-right">
-            <div class="flex-block">
-                <a class="img" href="img/certificates.png" data-fancybox="gallery">
-                    <img src="img/certificates.png" alt="">
-                </a>
-                <a class="img" href="img/certificates.png" data-fancybox="gallery">
-                    <img src="img/certificates.png" alt="">
-                </a>
-                <a class="img" href="img/certificates.png" data-fancybox="gallery">
-                    <img src="img/certificates.png" alt="">
-                </a>
-            </div>
-        </section>
-    </div>
-
-
-
+        </div>
+    </section>
 
     <footer class="footer">
     <div class="container">
@@ -333,13 +258,12 @@
         </div>
     </div>
 </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+
+
+
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/script.min.js" type="module"></script>
-
-
-
+    <script src="js/script.min.js"></script>
 </body>
 
 

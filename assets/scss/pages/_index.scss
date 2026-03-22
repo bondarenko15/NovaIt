@@ -11,7 +11,7 @@
                 padding: 270px 0 150px;
 
                 .main-title {
-                    color: #FFFFFF;
+                    color: #ffffff;
                     font-family: Poppins;
                     font-weight: 500;
                     font-size: 40px;
@@ -27,7 +27,7 @@
                 }
 
                 .main-descr {
-                    color: #FFFFFF;
+                    color: #ffffff;
                     font-family: Poppins;
                     font-weight: 400;
                     font-size: 20px;
@@ -35,9 +35,6 @@
                     display: block;
                     margin-top: 30px;
                 }
-
-
-
             }
         }
 
@@ -55,17 +52,60 @@
 
             .desktop {
                 display: none;
-
             }
         }
     }
-
-
+    .et_pb_text {
+        padding: 30px 0;
+        p {
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 400;
+            color: #17181a;
+            display: block;
+            margin: 20px 0 0;
+            a {
+                color: #214dde;
+                text-decoration: underline;
+            }
+        }
+        h4 {
+            font-family: Poppins;
+            font-size: 16px;
+            font-weight: 600;
+            color: #214dde;
+            display: block;
+            margin: 20px 0 0;
+        }
+        ul {
+            margin: 20px 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 0 0 0 10px;
+            li {
+                display: flex;
+                gap: 8px;
+                font-size: 14px;
+                font-weight: 400;
+                color: #17181a;
+                &::before {
+                    content: "";
+                    width: 5px;
+                    border-radius: 50px;
+                    flex-shrink: 0;
+                    height: 5px;
+                    margin: 8px 0 0 0;
+                    display: block;
+                    background: #17181a;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 648px) {
     .main_page {
-
         .main_screen {
             position: relative;
 
@@ -85,8 +125,6 @@
                         font-size: 25px;
                         margin-top: 35px;
                     }
-
-
                 }
             }
 
@@ -107,7 +145,21 @@
                 }
             }
         }
-
+        .et_pb_text {
+            padding: 40px 0;
+            p {
+                font-size: 16px;
+            }
+            h4 {
+                font-size: 18px;
+            }
+            ul {
+                gap: 7;
+                li {
+                    font-size: 16px;
+                }
+            }
+        }
     }
 }
 
@@ -116,7 +168,7 @@
         .main_screen {
             .container {
                 .flex-block {
-                    padding: 280px 0 75px;
+                    padding: 250px 0 75px;
 
                     .main-title {
                         font-size: 70px;
@@ -126,8 +178,6 @@
                         font-size: 30px;
                         margin-top: 30px;
                     }
-
-
                 }
             }
 
@@ -148,7 +198,24 @@
                 }
             }
         }
-
+        .et_pb_text {
+            padding: 60px 0;
+            p {
+                font-size: 16px;
+                margin: 25px 0 0;
+            }
+            h4 {
+                font-size: 18px;
+                margin: 25px 0 0;
+            }
+            ul {
+                gap: 7;
+                margin: 25px 0 0;
+                li {
+                    font-size: 16px;
+                }
+            }
+        }
     }
 }
 
@@ -157,7 +224,7 @@
         .main_screen {
             .container {
                 .flex-block {
-                    padding: 470px 0 110px;
+                    padding: 350px 0 100px;
 
                     .main-title {
                         font-size: 84px;
@@ -167,11 +234,22 @@
                         font-size: 36px;
                         margin-top: 20px;
                     }
-
-
                 }
             }
         }
-
+        .et_pb_text {
+            padding: 70px 0;
+            p {
+                font-size: 18px;
+            }
+            h4 {
+                font-size: 20px;
+            }
+            ul {
+                li {
+                    font-size: 18px;
+                }
+            }
+        }
     }
 }
