@@ -36,11 +36,20 @@
                 border-bottom: 1px solid #3a3c46;
                 .tab-item {
                     flex-shrink: 0;
-                    padding: 0 0 15px;
+                    padding: 5px 5px 15px;
+                    max-width: 120px;
+                    min-width: 80px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     img {
                         display: block;
                         opacity: 0.5;
-                        width: 60px;
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                        display: block;
                     }
                     &.active {
                         position: relative;
@@ -81,6 +90,8 @@
                 }
                 .block-content {
                     display: none;
+                    flex-direction: column;
+
                     &.active {
                         display: flex;
                     }
@@ -147,9 +158,9 @@
                 .tab-up {
                     gap: 50px;
                     .tab-item {
-                        img {
-                            width: 100px;
-                        }
+                        max-width: 150px;
+                        height: 60px;
+                        min-width: 100px;
                     }
                 }
                 .tab-content {
@@ -198,20 +209,21 @@
                 .tab-up {
                     gap: 60px;
                     .tab-item {
+                        min-width: 135px;
+                        max-width: 180px;
+                        height: 80px;
                         cursor: pointer;
                         &:hover {
                             img {
-                                opacity: .75;
+                                opacity: 0.75;
                             }
-                        }
-                        img {
-                            width: 150px;
                         }
                     }
                 }
                 .tab-content {
                     .block-content {
                         margin-top: 0;
+                        flex-direction: row;
                         justify-content: flex-start;
                         align-items: flex-start;
                         gap: 40px;

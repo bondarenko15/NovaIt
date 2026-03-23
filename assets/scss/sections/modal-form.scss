@@ -168,23 +168,41 @@
         }
         &--center {
             text-align: center;
+            border: 1px solid #214dde;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 50px 20px;
+            background: #f5f5fa;
+            align-items: center;
+            p {
+                font-family: Poppins;
+                font-size: 18px;
+                font-weight: 500;
+                color: #12172a;
+            }
+            .modal__ok {
+                font-family: Inter;
+                font-size: 16px;
+                font-weight: 600;
+                color: #214dde;
+                border: 1px solid #214dde;
+                padding: 14px 40px;
+                background: transparent;
+                border-radius: 35px;
+                width: max-content;
+            }
+            .modal__close {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                cursor: pointer;
+                background: url("../img/close.svg") center center/cover no-repeat;
+                width: 26px;
+                height: 26px;
+                display: block;
+            }
         }
-    }
-
-    &__close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-    }
-
-    &__ok {
-        margin-top: 20px;
-        padding: 10px 20px;
-        cursor: pointer;
-        border: none;
-        background: #000;
-        color: #fff;
     }
 }
 
@@ -223,9 +241,14 @@
             color: #fff;
         }
     }
+    .modal {
+        &__content:has(.modal__content--center) {
+            max-width: 50%;
+        }
+    }
 }
 
-@media (min-width: 648px) {
+@media (min-width: 1366px) {
     .modal {
         &__content {
             max-width: 850px;
@@ -252,6 +275,21 @@
             border: none;
             background: #000;
             color: #fff;
+        }
+    }
+    .modal {
+        &__content:has(.modal__content--center) {
+            max-width: 30%;
+            .modal__content--center {
+                padding: 60px 30px;
+                p {
+                    font-size: 24px;
+                }
+                .modal__ok {
+                    font-size: 18px;
+                    padding: 16px 50px;
+                }
+            }
         }
     }
 }
