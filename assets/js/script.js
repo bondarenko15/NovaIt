@@ -278,3 +278,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 4000);
     });
 });
+
+
+const items = document.querySelectorAll('.faq-list .list-item');
+
+items.forEach(item => {
+    item.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        items.forEach(el => el.classList.remove('active'));
+
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    });
+});
