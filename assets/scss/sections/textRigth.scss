@@ -1,6 +1,6 @@
 .text-rigth {
     padding: 40px 0 30px;
-
+    background: #f5f5fa;
     .container {
         .block-flex {
             display: flex;
@@ -16,13 +16,13 @@
                 .title-block {
                     font-family: Poppins;
                     font-weight: 400;
-                    color: #727A97;
+                    color: #727a97;
                     font-size: 30px;
 
                     i {
                         font-style: italic;
                         font-weight: 500;
-                        color: #12172A;
+                        color: #12172a;
                     }
                 }
 
@@ -30,7 +30,7 @@
                     font-size: 18px;
                     font-family: Poppins;
                     font-weight: 400;
-                    color: #727A97;
+                    color: #727a97;
                 }
             }
         }
@@ -44,7 +44,6 @@
         .container {
             .block-flex {
                 .block-text {
-
                     .title-block {
                         font-size: 40px;
                     }

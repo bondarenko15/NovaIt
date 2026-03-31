@@ -9,3 +9,52 @@
         background-position: 0 0;
     }
 }
+@keyframes upUp {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-2px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    75% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes glow {
+    0% {
+        box-shadow:
+            0 0 10px #63d9c5,
+            0 0 20px #67b7f8,
+            0 0 30px #9f8df0;
+    }
+    25% {
+        box-shadow:
+            0 0 15px #63d9c5,
+            0 0 25px #67b7f8,
+            0 0 35px #9f8df0;
+    }
+    50% {
+        box-shadow:
+            0 0 20px #63d9c5,
+            0 0 30px #67b7f8,
+            0 0 40px #9f8df0;
+    }
+    75% {
+        box-shadow:
+            0 0 15px #63d9c5,
+            0 0 25px #67b7f8,
+            0 0 35px #9f8df0;
+    }
+    100% {
+        box-shadow:
+            0 0 10px #63d9c5,
+            0 0 20px #67b7f8,
+            0 0 30px #9f8df0;
+    }
+}

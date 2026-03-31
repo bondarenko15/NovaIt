@@ -8,7 +8,10 @@ const fancyBox = document.querySelector('.certificates') || null;
 if (fancyBox) {
     Fancybox.bind("[data-fancybox]", {});
 }
-
+const fancyBox2 = document.querySelector('.service-banner') || null;
+if (fancyBox2) {
+    Fancybox.bind("[data-fancybox]", {});
+}
 
 const searchToggle = document.querySelector('.search-active');
 const headerSearch = document.querySelector('.header-search');
@@ -261,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('wpcf7mailsent', (event) => {
         const form = event.target;
-        if (form.id === 'custom-contact-form-modal') { 
+        if (form.id === 'custom-contact-form-modal') {
             closeModal(formModal);
             setTimeout(() => openModal(thanksModal), 300);
         }

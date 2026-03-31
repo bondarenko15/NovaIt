@@ -1,6 +1,7 @@
 .about-us_page {
     .about-us_textblock {
         padding: 30px 0;
+        background: #f5f5fa;
         .container {
             .flex-block {
                 display: flex;
@@ -35,52 +36,10 @@
             }
         }
     }
-    .about-us_stat {
-        padding: 30px 0;
-        .container {
-            .flex-block {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 20px;
-                .stat-item {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
-                    width: calc(50% - 10px);
-                    justify-content: center;
-                    align-items: center;
-                    padding: 0 15px;
-                    &:nth-child(odd) {
-                        position: relative;
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            width: 1px;
-                            display: block;
-                            top: 0;
-                            right: -10px;
-                            bottom: 0;
-                            background: #c2c5d2;
-                        }
-                    }
-                    .big-stat {
-                        font-family: Poppins;
-                        font-size: 40px;
-                        font-weight: 600;
-                        color: #214dde;
-                    }
-                    .stat-descr {
-                        font-family: Poppins;
-                        font-size: 12px;
-                        font-weight: 400;
-                        color: #727a97;
-                    }
-                }
-            }
-        }
-    }
+
     .ecosystem {
         padding: 30px 0;
+        background: #f5f5fa;
         .container {
             .news-title {
                 font-family: Poppins;
@@ -175,29 +134,7 @@
                 }
             }
         }
-        .about-us_stat {
-            padding: 40px 0;
-            .container {
-                .flex-block {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 20px;
-                    .stat-item {
-                        width: calc(50% - 10px);
-                        justify-content: center;
-                        align-items: center;
-                        padding: 0 15px;
-                        .big-stat {
-                            font-size: 60px;
-                        }
-                        .stat-descr {
-                            font-size: 16px;
-                            text-align: center;
-                        }
-                    }
-                }
-            }
-        }
+
         .ecosystem {
             padding: 40px 0;
             .container {
@@ -270,41 +207,7 @@
                 }
             }
         }
-        .about-us_stat {
-            padding: 60px 0;
-            .container {
-                .flex-block {
-                    .stat-item {
-                        width: calc(25% - 15px);
-                        padding: 0 20px;
-                        &:nth-child(odd) {
-                            &::after {
-                                display: none;
-                            }
-                        }
-                        &:not(:last-child) {
-                            position: relative;
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                width: 1px;
-                                display: block;
-                                top: 0;
-                                right: -10px;
-                                bottom: 0;
-                                background: #c2c5d2;
-                            }
-                        }
-                        .big-stat {
-                            font-size: 80px;
-                        }
-                        .stat-descr {
-                            font-size: 18px;
-                        }
-                    }
-                }
-            }
-        }
+
         .ecosystem {
             padding: 60px 0;
             .container {
@@ -374,21 +277,7 @@
                 }
             }
         }
-        .about-us_stat {
-            padding: 70px 0;
-            .container {
-                .flex-block {
-                    .stat-item {
-                        .big-stat {
-                            font-size: 96px;
-                        }
-                        .stat-descr {
-                            font-size: 20px;
-                        }
-                    }
-                }
-            }
-        }
+
         .ecosystem {
             padding: 70px 0;
             .container {
