@@ -101,6 +101,17 @@
                 justify-content: flex-start;
                 align-items: center;
                 gap: 20px;
+                li {
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: #fff;
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50px;
+                    }
+                }
             }
             .privacy {
                 display: flex;
@@ -279,6 +290,18 @@
                 justify-content: space-between;
                 padding: 20px 100px;
                 .social {
+                    li {
+                        
+                        a {
+                            width: 28px;
+                            height: 28px;
+                        }
+                        &:hover {
+                            a {
+                                background: #214DDE;
+                            }
+                        }
+                    }
                 }
                 .privacy {
                     a {

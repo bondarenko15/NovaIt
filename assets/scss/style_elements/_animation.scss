@@ -58,3 +58,29 @@
             0 0 30px #9f8df0;
     }
 }
+@keyframes flicker {
+    0% {
+        opacity: 1;
+        text-shadow: 0 0 5px #133cc4;
+    }
+    20% {
+        opacity: 0.8;
+        text-shadow: 0 0 10px #133cc4;
+    }
+    40% {
+        opacity: 1;
+        text-shadow: 0 0 5px #133cc4;
+    }
+    60% {
+        opacity: 0.8;
+        text-shadow: 0 0 15px #133cc4;
+    }
+    80% {
+        opacity: 1;
+        text-shadow: 0 0 8px #133cc4;
+    }
+    100% {
+        opacity: 0.8;
+        text-shadow: 0 0 12px #133cc4;
+    }
+}

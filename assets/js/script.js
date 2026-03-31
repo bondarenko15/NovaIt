@@ -293,3 +293,18 @@ items.forEach(item => {
         }
     });
 });
+
+const tabsService = document.querySelectorAll('.block-tabs .block-tab');
+
+tabsService.forEach(item => {
+    item.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        tabsService.forEach(el => el.classList.remove('active'));
+
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    });
+});
+
