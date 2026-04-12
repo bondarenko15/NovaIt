@@ -182,12 +182,10 @@
                     }
                     &:hover {
                         a {
-                            &::before {
-                                background: linear-gradient(180deg, transparent 50%, #0c0c0c 100%);
-                                opacity: 0.5;
-                                background-size: 100% 200%;
-                                animation: slideGradient 3s linear infinite;
-                            }
+                            transform: scale(1.01);
+                            box-shadow:
+                                0 2.27px 2.21px 0 rgba(23, 30, 108, 0.06),
+                                0 6.65px 5.32px 0 rgba(23, 30, 108, 0.33);
                         }
                     }
                 }
@@ -217,7 +215,7 @@
                     color: #214dde;
                     border-radius: 50px;
                     background: #dce0ed;
-                    opacity: .8;
+                    opacity: 0.8;
                 }
             }
         }

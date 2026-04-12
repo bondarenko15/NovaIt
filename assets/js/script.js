@@ -188,7 +188,7 @@ if (nav) {
 
 
 
-var swiper = new Swiper(".mySwiper", {
+/* var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -227,7 +227,7 @@ swiper.on('slideChange', () => {
     });
     swiper.el.style.height = maxHeight + 'px';
 });
-
+ */
 
 // Forms
 

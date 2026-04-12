@@ -9,6 +9,9 @@
                 position: relative;
                 z-index: 5;
                 pointer-events: none;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
                 .swiper-slide {
                     height: auto;
                     position: relative;
@@ -133,16 +136,11 @@
             .swiper {
                 padding: 0;
                 .swiper-wrapper {
+                    gap: 50px;
                     .swiper-slide {
                         padding: 35px 20px;
                         width: 900px;
-                        transition:
-                            transform 0.4s ease,
-                            opacity 0.4s ease,
-                            filter 0.4s ease;
-                        transform: scale(0.85);
-                        opacity: 0.9;
-                        filter: blur(4px);
+                        margin: 0 auto;
                         .content-block {
                             .logo {
                                 max-width: 200px;
@@ -174,7 +172,7 @@
     .partners_page {
         .partners {
             padding: 70px 0;
-            .swiper { 
+            .swiper {
                 .swiper-wrapper {
                     .swiper-slide {
                         padding: 40px 50px;
