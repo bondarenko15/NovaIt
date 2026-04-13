@@ -10,6 +10,15 @@
             display: block;
             margin: 0;
         }
+        .partners-descr {
+            font-family: Poppins;
+            font-size: 32px;
+            font-weight: 400;
+            display: block;
+            margin: 20px 0 0;
+            text-align: center;
+            color: #12172a;
+        }
         .partners-slider {
             padding: 40px 0 20px;
             .swiper-wrapper {
@@ -47,6 +56,10 @@
             .partners-title {
                 font-size: 55px;
             }
+            .partners-descr {
+                font-size: 24px;
+                margin: 15px 0 0;
+            }
             .partners-slider {
                 padding: 80px 0 30px;
             }
@@ -60,6 +73,10 @@
         .container {
             .partners-title {
                 font-size: 76px;
+            }
+            .partners-descr {
+                font-size: 30px;
+                margin: 20px 0 0;
             }
             .partners-slider {
                 padding: 140px 0 30px;
@@ -81,6 +98,9 @@
         .container {
             .partners-title {
                 font-size: 96px;
+            }
+            .partners-descr {
+                font-size: 32px;
             }
             .partners-slider {
                 padding: 150px 0 30px;
