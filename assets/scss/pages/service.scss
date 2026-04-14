@@ -189,8 +189,10 @@
                         height: 46px;
                         overflow: hidden;
                         border-radius: 50px;
-                        border: 1px solid #214dde;
                         flex-shrink: 0;
+                        &:not(:has(img)){
+                            border: 1px solid #214dde;
+                        }
                         img {
                             width: 100%;
                             height: auto;
@@ -347,6 +349,7 @@
         .results-list {
             display: flex;
             flex-direction: column;
+            
             gap: 15px;
             margin-top: 30px;
             li {
@@ -354,6 +357,7 @@
                 gap: 10px;
                 justify-content: flex-start;
                 align-items: flex-start;
+                align-items: center;
                 &::before {
                     content: "";
                     background: url("../img/results.svg") center center/cover no-repeat;
@@ -1109,10 +1113,11 @@
             .block-list {
                 margin-top: 50px;
                 flex-direction: row;
+                flex-wrap: wrap;
                 gap: 20px;
                 align-items: stretch;
                 .block-item {
-                    width: calc(33% - 9px);
+                    width: calc(33% - 10px);
                     padding: 25px 20px;
                     border-radius: 32px;
                 }
