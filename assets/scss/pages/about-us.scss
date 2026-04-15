@@ -27,7 +27,7 @@
                         border-radius: 10px;
                         img {
                             width: 100%;
-                            height: auto;
+                            height: 100%;
                             display: block;
                             object-fit: cover;
                         }
@@ -175,12 +175,12 @@
             .container {
                 .flex-block {
                     flex-direction: row;
-                    gap: 25;
+                    gap: 45px;
                     flex-wrap: wrap;
                     .content-block {
                         flex-direction: row;
                         gap: 100px;
-
+                        align-items: stretch;
                         .text-block {
                             flex-shrink: 0;
                             width: calc(45% - 50px);

@@ -52,7 +52,7 @@ if (select) {
 
 
 //Header lang 
-const lang = document.querySelector('.header-lang');
+/* const lang = document.querySelector('.header-lang');
 const current = document.querySelector('.current-lang');
 
 current.addEventListener('click', (e) => {
@@ -68,7 +68,7 @@ document.addEventListener('click', (e) => {
             lang.classList.remove('active');
         }
     }
-});
+}); */
 
 
 
@@ -236,8 +236,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const thanksModal = document.getElementById('thanksModal');
     const openBtn = document.querySelector('.open-modal');
 
-    const isContactsPage = document.getElementById('custom-contact-form') !== null;
-
     function openModal(modal) {
         modal.classList.add('active');
         document.body.classList.add('no-scroll');
@@ -248,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('no-scroll');
     }
 
-    if (openBtn && !isContactsPage) {
+    if (openBtn) {
         openBtn.addEventListener('click', () => openModal(formModal));
     }
 

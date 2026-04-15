@@ -141,23 +141,25 @@ a {
 
 @media (min-width: 648px) {
     .container {
-        width: 100%;
-        padding: 0 40px;
+        max-width: 688px;
+        margin: 0 auto;
+        padding: 0;
+
     }
 }
 
 @media (min-width: 960px) {
     .container {
-        padding: 0 60px;
+        max-width: 860px;
     }
 }
 @media (min-width: 1366px) {
     .container {
-        padding: 0 100px;
+        max-width: 1200px;
     }
 }
 @media (min-width: 1880px) {
     .container {
-        padding: 0 220px;
+        max-width: 1440px;
     }
 }

@@ -190,7 +190,7 @@
                         overflow: hidden;
                         border-radius: 50px;
                         flex-shrink: 0;
-                        &:not(:has(img)){
+                        &:not(:has(img)) {
                             border: 1px solid #214dde;
                         }
                         img {
@@ -349,7 +349,7 @@
         .results-list {
             display: flex;
             flex-direction: column;
-            
+
             gap: 15px;
             margin-top: 30px;
             li {
@@ -601,8 +601,7 @@
                 border-radius: 10px;
                 img {
                     width: 100%;
-                    height: auto;
-                    min-height: 240px;
+                    height: 100%;
                     object-fit: cover;
                     display: block;
                 }
@@ -638,7 +637,9 @@
                         flex-direction: column;
                         gap: 15px;
                         position: relative;
-
+                        &::before {
+                            display: none;
+                        }
                         .tab-title {
                             font-family: Poppins;
                             font-size: 16px;
@@ -681,6 +682,30 @@
                                 opacity: 1;
                                 overflow: visible;
                             }
+                        }
+                    }
+                }
+                ul {
+                    padding: 0 0 0 10px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-top: 20px;
+                    li {
+                        display: flex;
+                        gap: 8px;
+                        font-family: Poppins;
+                        color: #17181a;
+                        font-size: 14px;
+                        &::before {
+                            content: "";
+                            width: 5px;
+                            border-radius: 50px;
+                            flex-shrink: 0;
+                            height: 5px;
+                            margin: 11px 0 0 0;
+                            display: block;
+                            background: #17181a;
                         }
                     }
                 }
@@ -986,9 +1011,6 @@
                 margin-top: 30px;
                 .img {
                     border-radius: 10px;
-                    img {
-                        min-height: 500px;
-                    }
                 }
                 .text-block {
                     .block-title {
@@ -1009,6 +1031,12 @@
                             .tab-text {
                                 font-size: 16px;
                             }
+                        }
+                    }
+                    ul {
+                        gap: 10px;
+                        li {
+                            font-size: 16px;
                         }
                     }
                 }
@@ -1354,9 +1382,6 @@
                     border-radius: 10px;
                     width: calc(50% - 10px);
                     flex-shrink: 0;
-                    img {
-                        min-height: 660px;
-                    }
                 }
                 .text-block {
                     width: calc(50% - 10px);
@@ -1367,6 +1392,12 @@
                     .block-descr {
                         font-size: 16px;
                         margin: 10px 0 0;
+                    }
+                    ul {
+                        gap: 15px;
+                        li {
+                            font-size: 16px;
+                        }
                     }
                     .block-tabs {
                         margin-top: 20px;
@@ -1628,9 +1659,6 @@
             .wrapper-block {
                 margin-bottom: 75px;
                 .img {
-                    img {
-                        min-height: 600px;
-                    }
                 }
                 .text-block {
                     .block-title {
@@ -1639,6 +1667,12 @@
                     .block-descr {
                         font-size: 18px;
                         margin: 20px 0 0;
+                    }
+                    ul {
+                        gap: 20px;
+                        li {
+                            font-size: 18px;
+                        }
                     }
                     .block-tabs {
                         margin-top: 40px;
