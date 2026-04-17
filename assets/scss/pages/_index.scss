@@ -56,53 +56,7 @@
             }
         }
     }
-    .et_pb_text {
-        padding: 30px 0;
-        p {
-            font-family: Poppins;
-            font-size: 14px;
-            font-weight: 400;
-            color: #17181a;
-            display: block;
-            margin: 20px 0 0;
-            a {
-                color: #214dde;
-                text-decoration: underline;
-            }
-        }
-        h4 {
-            font-family: Poppins;
-            font-size: 16px;
-            font-weight: 600;
-            color: #214dde;
-            display: block;
-            margin: 20px 0 0;
-        }
-        ul {
-            margin: 20px 0 0;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            padding: 0 0 0 10px;
-            li {
-                display: flex;
-                gap: 8px;
-                font-size: 14px;
-                font-weight: 400;
-                color: #17181a;
-                &::before {
-                    content: "";
-                    width: 5px;
-                    border-radius: 50px;
-                    flex-shrink: 0;
-                    height: 5px;
-                    margin: 8px 0 0 0;
-                    display: block;
-                    background: #17181a;
-                }
-            }
-        }
-    }
+    
 }
 
 @media (min-width: 648px) {
@@ -146,21 +100,7 @@
                 }
             }
         }
-        .et_pb_text {
-            padding: 40px 0;
-            p {
-                font-size: 16px;
-            }
-            h4 {
-                font-size: 18px;
-            }
-            ul {
-                gap: 7;
-                li {
-                    font-size: 16px;
-                }
-            }
-        }
+        
     }
 }
 
@@ -199,24 +139,7 @@
                 }
             }
         }
-        .et_pb_text {
-            padding: 60px 0;
-            p {
-                font-size: 16px;
-                margin: 25px 0 0;
-            }
-            h4 {
-                font-size: 18px;
-                margin: 25px 0 0;
-            }
-            ul {
-                gap: 7;
-                margin: 25px 0 0;
-                li {
-                    font-size: 16px;
-                }
-            }
-        }
+       
     }
 }
 
@@ -238,19 +161,6 @@
                 }
             }
         }
-        .et_pb_text {
-            padding: 70px 0;
-            p {
-                font-size: 18px;
-            }
-            h4 {
-                font-size: 20px;
-            }
-            ul {
-                li {
-                    font-size: 18px;
-                }
-            }
-        }
+       
     }
 }

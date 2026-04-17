@@ -103,7 +103,9 @@
         .partners {
             padding: 40px 0;
             .swiper {
-                padding: 0 40px;
+                margin: 0 auto;
+                padding: 0;
+                max-width: 688px;
                 overflow: hidden;
                 .swiper-wrapper {
                     .swiper-slide {
@@ -134,12 +136,11 @@
         .partners {
             padding: 60px 0;
             .swiper {
-                padding: 0;
+                max-width: 1200px;
                 .swiper-wrapper {
                     gap: 50px;
                     .swiper-slide {
                         padding: 35px 20px;
-                        width: 900px;
                         margin: 0 auto;
                         .content-block {
                             .logo {
@@ -173,10 +174,10 @@
         .partners {
             padding: 70px 0;
             .swiper {
+                max-width: 1440px;
                 .swiper-wrapper {
                     .swiper-slide {
                         padding: 40px 50px;
-                        width: 1200px;
                         .content-block {
                             .logo {
                                 max-width: 300px;

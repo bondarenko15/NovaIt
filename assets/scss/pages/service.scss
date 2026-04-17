@@ -38,6 +38,7 @@
                         max-width: 335px;
                         text-align: center;
                         color: #ffffff;
+                        background: transparent;
                     }
                     .banner-popUp {
                         font-weight: 600;
@@ -179,16 +180,14 @@
             &.img-center {
                 .block-item {
                     display: flex;
+                    align-items: center;
                     gap: 15px;
                     .img {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        padding: 8px;
                         width: 46px;
                         height: 46px;
-                        overflow: hidden;
-                        border-radius: 50px;
                         flex-shrink: 0;
                         &:not(:has(img)) {
                             border: 1px solid #214dde;
@@ -248,6 +247,7 @@
             }
             .technology-list {
                 display: flex;
+                justify-content: center;
                 gap: 20px;
                 li {
                     width: calc(50% - 10px);
@@ -441,6 +441,10 @@
 
                 &.active {
                     .item-top {
+                        h4 {
+                            color: #214dde;
+                            font-weight: 700;
+                        }
                         img {
                             transform: rotate(180deg);
                         }
@@ -834,7 +838,6 @@
                         gap: 25px;
                         padding: 30px;
                         .img {
-                            padding: 15px;
                             width: 70px;
                             height: 70px;
                         }
@@ -1171,11 +1174,10 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
-                        align-items: center;
+                        justify-content: flex-start;
                         gap: 20px;
                         padding: 20px 40px;
                         .img {
-                            padding: 15px;
                             width: 80px;
                             height: 80px;
                         }
@@ -1215,6 +1217,10 @@
 
                         &:last-child {
                             justify-content: flex-start;
+                        }
+
+                        &:only-child {
+                            justify-content: center;
                         }
                     }
                 }
@@ -1391,7 +1397,7 @@
                     }
                     .block-descr {
                         font-size: 16px;
-                        margin: 10px 0 0;
+                        margin: 0;
                     }
                     ul {
                         gap: 15px;
@@ -1503,6 +1509,10 @@
                         display: flex;
                         gap: 20px;
                         padding: 35px 25px;
+                        .img {
+                            width: 92px;
+                            height: 92px;
+                        }
                         .block-text {
                             gap: 8px;
                             .item-title {

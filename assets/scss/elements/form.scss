@@ -11,6 +11,21 @@
         gap: 15px;
         .contact-form-field {
             width: 100%;
+            &.has-error {
+                input,
+                select,
+                textarea {
+                    border: 1px solid red;
+                }
+                span {
+                    display: block;
+                    padding: 5px 0 0 10px;
+                    color: red;
+                    font-family: Poppins;
+                    font-weight: 300;
+                    font-size: 14px;
+                }
+            }
             input,
             select,
             textarea {
@@ -22,9 +37,6 @@
                 font-weight: 300;
                 font-size: 16px;
                 color: #17181a;
-            }
-            .error {
-                border: 1px solid red;
             }
             textarea {
                 min-height: 130px;
@@ -70,6 +82,10 @@
             text-align: center;
             background: transparent;
             color: #214dde;
+        }
+        .contact-submit:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
         }
     }
 }
