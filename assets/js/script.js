@@ -4,13 +4,8 @@ AOS.init({
     offset: 200,
 });
 
-const fancyBox = document.querySelector('.certificates') || null;
-if (fancyBox) {
-    Fancybox.bind("[data-fancybox]", {});
-}
-const fancyBox2 = document.querySelector('.service-banner') || null;
-if (fancyBox2) {
-    Fancybox.bind("[data-fancybox]", {});
+if (document.querySelector('[data-fancybox]')) {
+    Fancybox.bind('[data-fancybox]', {});
 }
 
 const searchToggle = document.querySelector('.search-active');
