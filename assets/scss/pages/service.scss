@@ -1,5 +1,5 @@
 .service-banner {
-    padding: 100px 0 40px;
+    padding: 100px 0;
     .container {
         .flex-block {
             display: flex;
@@ -59,6 +59,7 @@
                     }
                 }
             }
+
             .banner-video {
                 width: 100%;
                 overflow: hidden;
@@ -639,6 +640,7 @@
                     .block-tab {
                         display: flex;
                         flex-direction: column;
+                        align-items: flex-start;
                         gap: 15px;
                         position: relative;
                         &::before {
@@ -652,7 +654,7 @@
                             display: block;
                             margin: 0;
                             &:hover {
-                                animation: flicker 1.5s infinite alternate;
+                                text-shadow: 0 2px 8px rgba(79, 124, 255, 0.4);
                                 transform: scale(1.01);
                             }
                         }
@@ -719,7 +721,7 @@
 }
 @media (min-width: 648px) {
     .service-banner {
-        padding: 110px 0 60px;
+        padding: 110px 0;
         .container {
             .flex-block {
                 .title-block {
@@ -1049,7 +1051,7 @@
 }
 @media (min-width: 1366px) {
     .service-banner {
-        padding: 180px 0 50px;
+        padding: 180px 0;
         .container {
             .flex-block {
                 flex-direction: row;
@@ -1427,7 +1429,7 @@
 
 @media (min-width: 1880px) {
     .service-banner {
-        padding: 210px 0 50px;
+        padding: 210px 0;
         .container {
             .flex-block {
                 gap: 50px;
@@ -1668,8 +1670,6 @@
         .container {
             .wrapper-block {
                 margin-bottom: 75px;
-                .img {
-                }
                 .text-block {
                     .block-title {
                         font-size: 36px;

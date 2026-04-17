@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 150px 0;
+    padding: 150px 20px;
     .background {
         position: absolute;
         inset: 0;
@@ -31,7 +31,7 @@
 
 @media (min-width: 648px) {
     .banner-pages {
-        padding: 150px 0;
+        padding: 150px 40px;
         .background {
             .desktop {
                 display: block;
@@ -48,7 +48,7 @@
 
 @media (min-width: 1366px) {
     .banner-pages {
-        padding: 220px 0;
+        padding: 220px 100px;
         .banner-title {
             font-size: 54px;
         }
@@ -58,7 +58,7 @@
 
 @media (min-width: 1880px) {
     .banner-pages {
-        padding: 260px 0;
+        padding: 260px 200px;
         .banner-title {
             font-size: 64px;
         }
