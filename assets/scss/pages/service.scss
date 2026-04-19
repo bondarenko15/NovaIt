@@ -699,19 +699,56 @@
                     margin-top: 20px;
                     li {
                         display: flex;
+                        flex-wrap: wrap;
                         gap: 8px;
                         font-family: Poppins;
                         color: #17181a;
                         font-size: 14px;
+                        position: relative;
+                        padding: 0 0 0 5px;
                         &::before {
                             content: "";
                             width: 5px;
                             border-radius: 50px;
                             flex-shrink: 0;
                             height: 5px;
-                            margin: 11px 0 0 0;
+                            margin-top: 8px;
                             display: block;
                             background: #17181a;
+                            position: absolute;
+                            top: 0;
+                            left: -5px;
+                        }
+                        p {
+                            margin: 0;
+                            display: inline;
+                        }
+                        ul {
+                            flex-basis: 100%;
+                            margin: 0 0 10px;
+                            padding: 0 0 0 10px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            li {
+                                flex-wrap: nowrap;
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: 8px;
+                                font-family: Poppins;
+                                color: #17181a;
+                                font-size: 14px;
+                                &::before {
+                                    content: "";
+                                    width: 5px;
+                                    border-radius: 50px;
+                                    flex-shrink: 0;
+                                    height: 5px;
+                                    margin-top: 8px;
+                                    display: block;
+                                    background: #17181a;
+                                }
+                            }
                         }
                     }
                 }
@@ -1405,6 +1442,9 @@
                         gap: 15px;
                         li {
                             font-size: 16px;
+                            &::before {
+                                margin: 10px 0 0 ;
+                            }
                         }
                     }
                     .block-tabs {
@@ -1676,7 +1716,6 @@
                     }
                     .block-descr {
                         font-size: 18px;
-                        margin: 20px 0 0;
                     }
                     ul {
                         gap: 20px;

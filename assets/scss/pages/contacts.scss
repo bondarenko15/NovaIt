@@ -30,6 +30,20 @@
                         height: 440px;
                     }
                 }
+                .map-info:has(img) {
+                    border-radius: 20px;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                        display: block;
+                        flex-shrink: 0;
+                    }
+                    &::before {
+                        display: none;
+                    }
+                }
                 .form-block {
                     display: flex;
                     flex-direction: column;

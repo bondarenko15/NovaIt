@@ -137,6 +137,7 @@ a {
     padding: 0 20px;
     position: relative;
 }
+
 .et_pb_text {
     display: flex;
     flex-direction: column;
@@ -183,6 +184,9 @@ a {
         }
     }
 }
+.et_pb_row {
+    margin-top: 30px;
+}
 @media (min-width: 648px) {
     .container {
         max-width: 688px;
@@ -201,6 +205,9 @@ a {
                 font-size: 16px;
             }
         }
+    }
+    .et_pb_row {
+        margin-top: 40px;
     }
 }
 
@@ -226,6 +233,9 @@ a {
             }
         }
     }
+    .et_pb_row {
+        margin-top: 60px;
+    }
 }
 @media (min-width: 1880px) {
     .container {
@@ -243,5 +253,8 @@ a {
                 font-size: 18px;
             }
         }
+    }
+    .et_pb_row {
+        margin-top: 70px;
     }
 }

@@ -1,9 +1,14 @@
 .banner-pages {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 150px 20px;
+    gap: 10px;
+    .case-logo {
+        max-width: 200px;
+    }
     .background {
         position: absolute;
         inset: 0;
@@ -32,6 +37,7 @@
 @media (min-width: 648px) {
     .banner-pages {
         padding: 150px 40px;
+
         .background {
             .desktop {
                 display: block;
@@ -49,12 +55,14 @@
 @media (min-width: 1366px) {
     .banner-pages {
         padding: 220px 100px;
+        .case-logo {
+            max-width: 250px;
+        }
         .banner-title {
             font-size: 54px;
         }
     }
 }
-
 
 @media (min-width: 1880px) {
     .banner-pages {
