@@ -355,6 +355,7 @@
                         width: 24px;
                         height: 24px;
                         border: none;
+                        margin: 0 0 0 50px;
                     }
 
                     .search-wrapper {
@@ -512,6 +513,9 @@
                 }
 
                 .header-search {
+                    .search-active {
+                        margin: 0;
+                    }
                     .search-wrapper {
                         left: 19%;
                         width: 60%;
