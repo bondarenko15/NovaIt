@@ -51,6 +51,7 @@ body:has(header + .error_page) {
 html {
     box-sizing: border-box;
     position: relative;
+    scrollbar-gutter: stable;
     height: 100%;
 }
 

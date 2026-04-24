@@ -227,52 +227,74 @@ swiper.on('slideChange', () => {
 // Forms
 
 document.addEventListener('DOMContentLoaded', () => {
-    const formModal = document.getElementById('formModal');
-    const thanksModal = document.getElementById('thanksModal');
-    const openBtn = document.querySelector('.open-modal');
+    const modals = {
+        main: {
+            form: document.getElementById('formModal'),
+            thanks: document.getElementById('thanksModal'),
+            btns: document.querySelectorAll('.open-modal'),
+            formId: 'custom-contact-form-modal'
+        },
+        demo: {
+            form: document.getElementById('modalFormDemo'),
+            thanks: document.getElementById('thanksModalDemo'),
+            btns: document.querySelectorAll('.open-modalDemo'),
+            formId: 'custom-contact-form-demo'
+        }
+    };
 
     function openModal(modal) {
+        if (!modal) return;
         modal.classList.add('active');
         document.body.classList.add('no-scroll');
+        disableScroll();
     }
 
     function closeModal(modal) {
+        if (!modal) return;
         modal.classList.remove('active');
         document.body.classList.remove('no-scroll');
+        enableScroll();
+    }
+    function disableScroll() {
+        const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+        document.body.style.paddingRight = scrollBarWidth + 'px';
+        document.body.classList.add('no-scroll');
     }
 
-    if (openBtn) {
-        openBtn.addEventListener('click', () => openModal(formModal));
+    function enableScroll() {
+        document.body.style.paddingRight = '';
+        document.body.classList.remove('no-scroll');
     }
+    Object.values(modals).forEach(item => {
+        item.btns.forEach(btn => {
+            btn.addEventListener('click', () => openModal(item.form));
+        });
+    });
 
     document.querySelectorAll('.modal').forEach(modal => {
-        const closeBtn = modal.querySelector('.modal__close');
-        const overlay = modal.querySelector('.modal__overlay');
-        const okBtn = modal.querySelector('.modal__ok');
-
-        if (closeBtn) closeBtn.addEventListener('click', () => closeModal(modal));
-        if (overlay) overlay.addEventListener('click', () => closeModal(modal));
-        if (okBtn) okBtn.addEventListener('click', () => closeModal(modal));
+        modal.querySelector('.modal__close')?.addEventListener('click', () => closeModal(modal));
+        modal.querySelector('.modal__overlay')?.addEventListener('click', () => closeModal(modal));
+        modal.querySelector('.modal__ok')?.addEventListener('click', () => closeModal(modal));
     });
 
     document.addEventListener('wpcf7mailsent', (event) => {
         const form = event.target;
-        if (form.id === 'custom-contact-form-modal') {
-            closeModal(formModal);
-            setTimeout(() => openModal(thanksModal), 300);
-        }
 
-        if (form.classList.contains('custom-contact-form')) {
-            openModal(thanksModal);
-        }
+        Object.values(modals).forEach(item => {
+            if (form.id === item.formId) {
+                closeModal(item.form);
 
-        setTimeout(() => {
-            closeModal(thanksModal);
-        }, 4000);
+                setTimeout(() => {
+                    openModal(item.thanks);
+                }, 300);
+
+                setTimeout(() => {
+                    closeModal(item.thanks);
+                }, 4000);
+            }
+        });
     });
 });
-
-
 const items = document.querySelectorAll('.faq-list .list-item');
 
 items.forEach(item => {
