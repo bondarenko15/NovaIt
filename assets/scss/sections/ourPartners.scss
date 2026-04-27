@@ -23,12 +23,13 @@
             padding: 40px 0 20px;
             .swiper-wrapper {
                 align-items: center;
+                justify-content: center;
                 .swiper-slide {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     img {
-                        max-width: 150px;
+                        max-width: 170px;
                         width: 100%;
                     }
                 }
@@ -84,7 +85,7 @@
                 .swiper-wrapper {
                     .swiper-slide {
                         img {
-                            max-width: 230px;
+                            max-width: 240px;
                         }
                     }
                 }
