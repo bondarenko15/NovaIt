@@ -71,11 +71,11 @@
                                 &::before {
                                     content: "";
                                     display: block;
-                                    width: 18px;
-                                    height: 18px;
-                                    margin: 2px 0 0 0;
+                                    width: 21px;
+                                    height: 14px;
+                                    margin: 5px 0 0;
                                     flex-shrink: 0;
-                                    background: url("../img/email-s.svg") center center/cover no-repeat;
+                                    background: url("../img/email-b.svg") center center/cover no-repeat;
                                 }
                             }
                             &.adress {
