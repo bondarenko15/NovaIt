@@ -90,7 +90,19 @@
 </header>
 
   <div class="main_page">
-    <section class="main_screen">
+    <section class="hero-section">
+      <!-- Холст для WebGL анимации -->
+      <canvas id="webgl-canvas"></canvas>
+
+      <div class="container">
+        <div class="flex-block">
+          <h1 class="main-title"><i>Customer</i> communication solutions</h1>
+          <h3 class="main-descr">from strategy to implementation.</h3>
+          <a class="hover-white btn-link main-link " href="#">See what we do</a>
+        </div>
+      </div>
+    </section>
+    <!--   <section class="main_screen">
       <div class="container">
         <div class="flex-block">
           <h1 class="main-title"><i>Customer</i> communication solutions</h1>
@@ -102,7 +114,7 @@
         <img src="img/main.png" alt="" class="desktop">
         <img src="img/main-m.png" alt="" class="mobile">
       </div>
-    </section>
+    </section> -->
     <section class="text-rigth" data-aos="fade-up">
     <div class="container">
         <div class="block-flex">
@@ -411,7 +423,7 @@
         </div>
     </div>
 </div>
-    
+
   </div>
 
   <footer class="footer">
@@ -520,7 +532,7 @@
 </footer>
 
 
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/script.min.js"></script>

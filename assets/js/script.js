@@ -323,3 +323,152 @@ tabsService.forEach(item => {
     });
 });
 
+const canvas = document.getElementById('webgl-canvas');
+const scene = new THREE.Scene();
+
+// Настройка камеры (угол обзора, соотношение сторон, ближняя/дальняя плоскость отсечения)
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+// Отдаляем камеру и смотрим более горизонтально (прямо на объект)
+camera.position.z = 8;
+camera.position.y = 0;
+camera.lookAt(0, 0, 0);
+
+const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Оптимизация для Retina экранов
+renderer.setClearColor(0x000000, 1);
+// Создаем геометрию - делаем ее ЗНАЧИТЕЛЬНО шире (80 вместо 40) и выше, чтобы края точно уходили за экран
+const geometry = new THREE.PlaneGeometry(80, 30, 400, 150);
+
+// Шейдеры - это программы, работающие на видеокарте. Они создают форму волны и цвета.
+
+// Вершинный шейдер (Vertex Shader) - отвечает за форму (искривление плоскости)
+const vertexShader = `
+            uniform float uTime;
+            varying vec2 vUv;
+            varying float vElevation;
+            varying vec3 vWorldPos;
+
+            void main() {
+                vUv = uv;
+                vec4 modelPosition = modelMatrix * vec4(position, 1.0);
+                // Делаем шаг волны больше и саму волну сильнее
+                float elevation = sin(modelPosition.x * 0.08 - uTime * 0.2) * 2.5;
+                
+                // Увеличиваем шаг и силу для искривления дальнего края
+                elevation += sin(modelPosition.x * 0.3 - uTime * 0.3) * (vUv.y * 1.5);
+                
+                // Увеличиваем шаг между волнами по оси Y (в глубину) и делаем перепады более выраженными
+                elevation += sin(modelPosition.y * 0.25 + uTime * 0.1) * 1.2;
+                
+                // Микро-волны для легкой детализации
+                elevation += sin(modelPosition.x * 0.2 - uTime * 0.4) * 0.3;
+                
+                // Применяем высоту к Z координате
+                modelPosition.z += elevation;
+                
+                // Передаем данные во фрагментный шейдер
+                vElevation = elevation;
+                vWorldPos = modelPosition.xyz;
+
+                gl_Position = projectionMatrix * viewMatrix * modelPosition;
+            }
+        `;
+
+// Фрагментный шейдер (Fragment Shader) - отвечает за цвет, линии и "стеклянность"
+const fragmentShader = `
+            uniform float uTime;
+            uniform vec3 uColor1;
+            uniform vec3 uColor2;
+            uniform vec3 uColor3;
+            uniform vec3 uColorDark;
+            
+            varying vec2 vUv;
+            varying float vElevation;
+            varying vec3 vWorldPos;
+
+            void main() {
+                // Искажаем координаты для легкой ряби на нитях (привязываем к мировым координатам)
+                vec2 distortedUv = vUv;
+                distortedUv.y += sin(vWorldPos.x * 0.2 - uTime * 0.2) * 0.05; 
+                
+                // Создаем горизонтальные тонкие "стеклянные" полосы
+                // Увеличили плотность до 200, так как сама плоскость стала больше
+                float lines = sin(distortedUv.y * 200.0);
+                lines = smoothstep(0.75, 1.0, lines); 
+                
+                // Привязываем градиент к мировым координатам (от -20 до +20), 
+                // чтобы при расширении плоскости градиент не растягивался за пределы экрана
+                float gradX = clamp((vWorldPos.x + 20.0) / 40.0, 0.0, 1.0);
+                
+                // Создаем красивый градиент по горизонтали
+                vec3 gradientColor;
+                if (gradX < 0.46) {
+                    gradientColor = mix(uColor1, uColor2, gradX / 0.46);
+                } else {
+                    gradientColor = mix(uColor2, uColor3, (gradX - 0.46) / 0.54);
+                }
+                
+                // Вычисляем затенение
+                float depthMix = smoothstep(-2.5, 3.5, vElevation);
+                vec3 baseColor = mix(uColorDark, gradientColor, depthMix * 0.5);
+                
+                // Накладываем цвет на результат
+                vec3 finalColor = baseColor;
+                
+                // Линии
+                finalColor += gradientColor * lines * 0.15;
+                
+                // Легкая цветокоррекция для глубины черного
+                finalColor = pow(finalColor, vec3(1.1));
+
+                gl_FragColor = vec4(finalColor, 1.0);
+            }
+        `;
+
+const material = new THREE.ShaderMaterial({
+    vertexShader: vertexShader,
+    fragmentShader: fragmentShader,
+    uniforms: {
+        uTime: { value: 0 },
+        uColor1: { value: new THREE.Color('#63D9C5') },     // 0% (Бирюзовый)
+        uColor2: { value: new THREE.Color('#67B7F8') },     // 46% (Голубой)
+        uColor3: { value: new THREE.Color('#9F8DF0') },     // 100% (Фиолетовый)
+        uColorDark: { value: new THREE.Color('#010205') }   // Очень темный, почти черный
+    },
+    transparent: true,
+    side: THREE.DoubleSide
+});
+
+const mesh = new THREE.Mesh(geometry, material);
+
+mesh.rotation.x = -Math.PI / 3.5;
+mesh.rotation.z = -Math.PI / 24; // Легкий наклон по диагонали для динамики
+mesh.position.y = -1.2;
+
+scene.add(mesh);
+
+// Функция анимации
+const clock = new THREE.Clock();
+
+function animate() {
+    requestAnimationFrame(animate);
+
+    const elapsedTime = clock.getElapsedTime();
+
+    // Обновляем время в шейдере для движения волн
+    material.uniforms.uTime.value = elapsedTime;
+
+    renderer.render(scene, camera);
+}
+
+animate();
+
+// Обработка изменения размера окна браузера
+window.addEventListener('resize', () => {
+    // Обновляем размеры
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+});
