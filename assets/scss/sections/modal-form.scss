@@ -51,13 +51,13 @@
             padding: 60px 20px 40px;
             &::before {
                 content: "";
-                background: url("../img/form.png") center center/cover no-repeat;
+                background: url("/wp-content/themes/novait/assets/img//form.png") center center/cover no-repeat;
                 position: absolute;
                 inset: 0;
                 z-index: -1;
             }
             .modal__close {
-                background: url("../img/close-w.svg") center center/cover no-repeat;
+                background: url("/wp-content/themes/novait/assets/img//close-w.svg") center center/cover no-repeat;
                 width: 26px;
                 height: 26px;
                 border: none;
@@ -144,13 +144,13 @@
             padding: 60px 20px 40px;
             &::before {
                 content: "";
-                background: url("../img/form.png") center center/cover no-repeat;
+                background: url("/wp-content/themes/novait/assets/img//form.png") center center/cover no-repeat;
                 position: absolute;
                 inset: 0;
                 z-index: -1;
             }
             .modal__close {
-                background: url("../img/close-w.svg") center center/cover no-repeat;
+                background: url("/wp-content/themes/novait/assets/img//close-w.svg") center center/cover no-repeat;
                 width: 26px;
                 height: 26px;
                 border: none;
@@ -197,7 +197,7 @@
                 top: 15px;
                 right: 15px;
                 cursor: pointer;
-                background: url("../img/close.svg") center center/cover no-repeat;
+                background: url("/wp-content/themes/novait/assets/img//close.svg") center center/cover no-repeat;
                 width: 26px;
                 height: 26px;
                 display: block;

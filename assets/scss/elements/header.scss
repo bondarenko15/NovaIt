@@ -6,8 +6,6 @@
     right: 0;
     z-index: 100;
     background: transparent;
-   /*  background-color: rgba(0, 0, 0, 0.85); */
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7); */
     &.scroll {
         background-color: rgba(0, 0, 0, 0.85);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
@@ -80,11 +78,12 @@
                 display: flex;
                 justify-content: flex-end;
                 transition: 0.25s all ease;
-
+                display: none;
                 .search-active {
                     transition: 0.25s all ease;
                     display: block;
-                    background: url("../img/search-normal.svg") center center/cover no-repeat;
+                    background: url("/wp-content/themes/novait/assets/img//search-normal.svg") center center/cover
+                        no-repeat;
                     width: 24px;
                     height: 24px;
                     border: none;
@@ -121,14 +120,15 @@
                         display: block;
                         width: 21px;
                         height: 21px;
-                        background: url("../img/search-blue.svg") center center/cover no-repeat;
+                        background: url("/wp-content/themes/novait/assets/img//search-blue.svg") center center/cover
+                            no-repeat;
                     }
                 }
             }
 
             .header-search.open {
                 .search-active {
-                    background: url("../img/close.svg") center center/cover no-repeat;
+                    background: url("/wp-content/themes/novait/assets/img//close.svg") center center/cover no-repeat;
                 }
 
                 .search-wrapper {
@@ -191,7 +191,8 @@
                                 }
                                 a:has(+ .nav-list)::after {
                                     content: "";
-                                    background: url("../img/arrow-d-w.svg") center center/cover no-repeat;
+                                    background: url("/wp-content/themes/novait/assets/img//arrow-d-w.svg") center
+                                        center/cover no-repeat;
                                     width: 10px;
                                     height: 7px;
                                     display: block;
@@ -253,7 +254,8 @@
                                     a {
                                         color: #214dde;
                                         &::after {
-                                            background: url("../img/arrow-d-b.svg") center center/cover no-repeat;
+                                            background: url("/wp-content/themes/novait/assets/img//arrow-d-b.svg")
+                                                center center/cover no-repeat;
                                             transform: rotate(180deg);
                                         }
                                     }
@@ -278,7 +280,8 @@
                             top: 50%;
                             right: 0;
                             transform: translateY(-50%);
-                            background: url("../img/arrow-d-w.svg") center center/cover no-repeat;
+                            background: url("/wp-content/themes/novait/assets/img//arrow-d-w.svg") center center/cover
+                                no-repeat;
                             width: 10px;
                             height: 7px;
                             display: block;
@@ -353,7 +356,8 @@
                     .search-active {
                         transition: 0.25s all ease;
                         display: block;
-                        background: url("../img/search-normal.svg") center center/cover no-repeat;
+                        background: url("/wp-content/themes/novait/assets/img//search-normal.svg") center center/cover
+                            no-repeat;
                         width: 24px;
                         height: 24px;
                         border: none;
@@ -457,7 +461,8 @@
                             top: 50%;
                             right: 0;
                             transform: translateY(-50%);
-                            background: url("../img/arrow-d-w.svg") center center/cover no-repeat;
+                            background: url("/wp-content/themes/novait/assets/img//arrow-d-w.svg") center center/cover
+                                no-repeat;
                             width: 10px;
                             height: 7px;
                             display: block;

@@ -82,6 +82,7 @@
     .certificates {
         padding: 30px 0;
         background: #f5f5fa;
+        display: none;
         .flex-block {
             padding: 0 0 0 20px;
             display: flex;
@@ -110,7 +111,6 @@
                 .block-title {
                     font-size: 35px;
                     line-height: 55px;
-                    max-width: 80%;
                 }
                 .block-descr {
                     margin-top: 20px;
@@ -159,12 +159,10 @@
             .container {
                 .block-title {
                     font-size: 40px;
-                    max-width: 50%;
                 }
                 .block-descr {
                     margin-top: 20px;
                     font-size: 18px;
-                    max-width: 50%;
                 }
             }
         }

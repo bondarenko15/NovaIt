@@ -64,14 +64,14 @@
                     }
                     .number {
                         &::before {
-                            background: url("../img/phone.svg") center center/cover no-repeat;
+                            background: url("/wp-content/themes/novait/assets/img//phone.svg") center center/cover no-repeat;
                         }
                     }
                     .email {
                         &::before {
                             width: 19px;
                             height: 14px;
-                            background: url("../img/email.svg") center center/cover no-repeat;
+                            background: url("/wp-content/themes/novait/assets/img//email.svg") center center/cover no-repeat;
                         }
                     }
                 }
@@ -247,7 +247,7 @@
                     .number {
                         &:hover {
                             &::before {
-                                background: url("../img/phone-s.svg") center center/cover no-repeat;
+                                background: url("/wp-content/themes/novait/assets/img//phone-s.svg") center center/cover no-repeat;
                             }
                         }
                     }
@@ -256,7 +256,7 @@
                             &::before {
                                 width: 19px;
                                 height: 14px;
-                                background: url("../img/email-s.svg") center center/cover no-repeat;
+                                background: url("/wp-content/themes/novait/assets/img//email-s.svg") center center/cover no-repeat;
                             }
                         }
                     }

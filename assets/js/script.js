@@ -82,15 +82,14 @@ window.addEventListener('scroll', () => {
 const partnerSlider = new Swiper('.partners-slider', {
     slidesPerView: 3,
     spaceBetween: 20,
-    loop: true,
-    autoplay: true,
+    loop: false,
     scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true,
     },
     breakpoints: {
         648: { slidesPerView: 4, spaceBetween: 40 },
-        1366: { slidesPerView: 6, spaceBetween: 60 },
+        1366: { slidesPerView: 4, spaceBetween: 40 },
     }
 });
 
@@ -447,7 +446,20 @@ mesh.rotation.z = -Math.PI / 24; // Легкий наклон по диагон�
 mesh.position.y = -1.2;
 
 scene.add(mesh);
-
+// Функція для адаптації положення хвилі під мобільні пристрої
+function updateLayout() {
+    if (window.innerWidth <= 768) {
+        // На мобільних опускаємо хвилю значно нижче, щоб залишити відстань зверху
+        mesh.position.y = -3.5;
+        // Трохи віддаляємо камеру, щоб хвиля виглядала гармонійно на вузькому екрані
+        camera.position.z = 10;
+    } else {
+        // На десктопі залишаємо стандартне положення
+        mesh.position.y = -1.2;
+        camera.position.z = 8;
+    }
+}  // Викликаємо функцію одразу при завантаженні
+updateLayout();
 // Функция анимации
 const clock = new THREE.Clock();
 
@@ -471,4 +483,14 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    // Оновлюємо положення хвилі при зміні розміру екрана (наприклад, при повороті телефона)
+    updateLayout();
 });
+
+function setVH() {
+    document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+}
+
+setVH();
+window.addEventListener('resize', setVH);

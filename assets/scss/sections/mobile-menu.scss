@@ -67,7 +67,7 @@
                     }
                     &.open > .nav-arrow {
                         transform: rotate(180deg);
-                        background: url("../img/arrow-d-b.svg") center center/cover no-repeat;
+                        background: url("/wp-content/themes/novait/assets/img//arrow-d-b.svg") center center/cover no-repeat;
                     }
                     a {
                         font-family: Inter;
@@ -76,7 +76,7 @@
                         color: #f7f9fb;
                     }
                     .nav-arrow {
-                        background: url("../img/arrow-d-w.svg") center center/cover no-repeat;
+                        background: url("/wp-content/themes/novait/assets/img//arrow-d-w.svg") center center/cover no-repeat;
                         width: 7px;
                         height: 6px;
                         margin-top: 2px;
@@ -138,7 +138,7 @@
                 align-items: center;
                 &::after {
                     content: "";
-                    background: url("../img/arrow-d-w.svg") center center/cover no-repeat;
+                    background: url("/wp-content/themes/novait/assets/img//arrow-d-w.svg") center center/cover no-repeat;
                     width: 10px;
                     height: 7px;
                     display: block;
@@ -252,7 +252,7 @@
                     align-items: center;
                     &::after {
                         content: "";
-                        background: url("../img/arrow-d-w.svg") center center/cover no-repeat;
+                        background: url("/wp-content/themes/novait/assets/img//arrow-d-w.svg") center center/cover no-repeat;
                         width: 10px;
                         height: 7px;
                         display: block;
